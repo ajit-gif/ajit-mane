@@ -3,140 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ajit Mane — Digital Marketing Executive & Web Developer</title>
+  <title>Ajit Mane — Digital Marketing & Web Development</title>
   <meta name="description" content="Results-driven Digital Marketing Executive with 2+ years of experience in SEO, social media marketing, and performance campaigns." />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
+  <!-- ====== NAVBAR ====== -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
+    <div class="nav-inner">
       <a href="#home" class="nav-logo">
-        <span class="logo-am">AM</span>
-        <span class="logo-text">Ajit Mane</span>
+        <span class="bracket">[</span>AM<span class="bracket">]</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#home"       class="nav-link active">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#tools" class="nav-link">Tools</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#tools"      class="nav-link">Tools</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <a href="#contact" class="nav-hire">Hire Me <i class="fas fa-arrow-right"></i></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ========== HOME ========== -->
+  <!-- ====== HERO ====== -->
   <section class="hero" id="home">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-container">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Available for freelance projects
-      </div>
-      <h1 class="hero-title">
-        <span class="hero-name">Ajit Mane</span>
-        <br />
-        <span class="hero-role">Digital Marketing Executive</span>
-        <br />
-        <span class="hero-role hero-role-alt">&amp; Web Developer</span>
-      </h1>
-      <p class="hero-tagline">
-        Results-driven Digital Marketing Executive with 2+ years of experience in SEO,
-        social media marketing, and performance campaigns.
-      </p>
-      <div class="hero-cta">
-        <a href="#about" class="btn btn-primary">Know More <i class="fas fa-arrow-down"></i></a>
-        <a href="#contact" class="btn btn-outline">View Profile <i class="fas fa-user"></i></a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">2+</span>
-          <span class="stat-label">Years Experience</span>
+    <div class="hero-bg-accent"></div>
+    <div class="hero-dots"></div>
+
+    <div class="hero-grid">
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <div class="eyebrow-dot"></div>
+          <span>Mumbai, India &nbsp;·&nbsp; Available for Freelance</span>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">15+</span>
-          <span class="stat-label">Tools Mastered</span>
+        <h1 class="hero-h1">
+          <span class="h1-italic">Digital</span>
+          <span class="h1-bold">Marketing</span>
+          <span class="h1-outlined">Executive</span>
+        </h1>
+        <p class="hero-tagline">
+          Results-driven professional with 2+ years of experience in SEO,
+          social media marketing, and performance campaigns.
+        </p>
+        <div class="hero-btns">
+          <a href="#skills" class="btn-blue">Explore Work</a>
+          <a href="#contact" class="btn-outline-green">Let's Talk</a>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Core Specialties</span>
+      </div>
+
+      <!-- Right -->
+      <div class="hero-right">
+        <div class="id-card">
+          <div class="id-card-stripe"></div>
+          <div class="id-avatar">AM</div>
+          <div class="id-name">Ajit Mane</div>
+          <div class="id-title">Digital Marketing Executive<br>&amp; Web Developer</div>
+          <div class="id-tags">
+            <span>SEO</span>
+            <span>WordPress</span>
+            <span>Google Ads</span>
+            <span>AI Tools</span>
+          </div>
+          <div class="id-footer">
+            <i class="fas fa-map-marker-alt"></i> Mumbai, India
+          </div>
+        </div>
+
+        <div class="stat-pills">
+          <div class="stat-pill pill-blue">
+            <span class="pill-num">2+</span>
+            <span class="pill-label">Years Exp.</span>
+          </div>
+          <div class="stat-pill pill-green">
+            <span class="pill-num">18+</span>
+            <span class="pill-label">Tools Used</span>
+          </div>
+          <div class="stat-pill pill-blue">
+            <span class="pill-num">3</span>
+            <span class="pill-label">Specialties</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+
+    <!-- Scrolling ticker -->
+    <div class="ticker-bar">
+      <div class="ticker-track">
+        <span>SEO Optimization</span><em>◆</em>
+        <span>Web Development</span><em>◆</em>
+        <span>Content Creation</span><em>◆</em>
+        <span>Google Analytics</span><em>◆</em>
+        <span>Performance Marketing</span><em>◆</em>
+        <span>AI-Powered Workflows</span><em>◆</em>
+        <span>WordPress &amp; Wix</span><em>◆</em>
+        <span>SEO Optimization</span><em>◆</em>
+        <span>Web Development</span><em>◆</em>
+        <span>Content Creation</span><em>◆</em>
+        <span>Google Analytics</span><em>◆</em>
+        <span>Performance Marketing</span><em>◆</em>
+        <span>AI-Powered Workflows</span><em>◆</em>
+        <span>WordPress &amp; Wix</span><em>◆</em>
+      </div>
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
+  <!-- ====== ABOUT ====== -->
   <section class="section about-section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-user-circle"></i> About Me</span>
-        <h2 class="section-title">The Person Behind the Screen</h2>
-      </div>
       <div class="about-grid">
-        <div class="about-card-left reveal">
-          <div class="about-avatar">
-            <div class="avatar-initials">AM</div>
-            <div class="avatar-ring"></div>
-            <div class="avatar-ring ring-2"></div>
-          </div>
-          <blockquote class="about-quote">
-            <i class="fas fa-quote-left quote-icon"></i>
-            Do what you love and you'll never have a problem with Mondays.
+        <div class="about-left reveal">
+          <div class="sec-label"><span class="sec-num">01</span><span>About Me</span></div>
+          <h2 class="sec-heading">
+            The person<br><em>behind the screen</em>
+          </h2>
+          <blockquote class="big-quote">
+            "Do what you love and you'll never have a problem with Mondays."
           </blockquote>
-          <div class="about-contact-quick">
-            <div class="quick-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Mumbai, India</span>
-            </div>
-            <div class="quick-item">
-              <i class="fas fa-briefcase"></i>
-              <span>Freelancer</span>
-            </div>
+          <div class="about-location">
+            <i class="fas fa-map-marker-alt"></i> Mumbai, India &nbsp;·&nbsp;
+            <i class="fas fa-briefcase"></i> Freelancer
           </div>
         </div>
-        <div class="about-content reveal">
-          <p class="about-text">
-            I am a passionate <strong>Digital Marketing Executive and Web Developer</strong> working as a freelancer.
-            I enjoy solving real-world problems using digital solutions and continuous learning.
-          </p>
-          <p class="about-text">
-            With over <strong>2 years of experience</strong>, I have worked on SEO, website development,
-            and content strategies to improve visibility and performance.
-          </p>
-          <p class="about-text">
-            I actively use <strong>AI tools</strong> to improve productivity and stay updated with modern digital trends.
-          </p>
-          <div class="other-skills">
-            <h3 class="other-skills-title">Other Skills</h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fas fa-search"></i> SEO Optimization</span>
-              <span class="skill-tag"><i class="fas fa-pen-nib"></i> Content Marketing</span>
-              <span class="skill-tag"><i class="fas fa-cloud"></i> Basic DevOps &amp; AWS</span>
-              <span class="skill-tag"><i class="fas fa-users"></i> Teamwork &amp; Communication</span>
-              <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+        <div class="about-right reveal">
+          <div class="about-avatar-block">
+            <div class="av-circle">AM</div>
+            <div class="av-ring"></div>
+          </div>
+          <p class="body-text">I am a passionate <strong>Digital Marketing Executive and Web Developer</strong> working as a freelancer. I enjoy solving real-world problems using digital solutions and continuous learning.</p>
+          <p class="body-text">With over <strong>2 years of experience</strong>, I have worked on SEO, website development, and content strategies. I actively use <strong>AI tools</strong> to improve productivity and stay updated with modern digital trends.</p>
+          <div class="tag-group">
+            <div class="tg-label">Other Skills</div>
+            <div class="tg-tags">
+              <span><i class="fas fa-search"></i> SEO Optimization</span>
+              <span><i class="fas fa-pen-nib"></i> Content Marketing</span>
+              <span><i class="fas fa-cloud"></i> Basic DevOps &amp; AWS</span>
+              <span><i class="fas fa-users"></i> Teamwork &amp; Communication</span>
+              <span><i class="fas fa-lightbulb"></i> Problem Solving</span>
             </div>
           </div>
         </div>
@@ -144,72 +157,52 @@
     </div>
   </section>
 
-  <!-- ========== SKILLS / SERVICES ========== -->
+  <!-- ====== SKILLS ====== -->
   <section class="section skills-section" id="skills">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-rocket"></i> Skills &amp; Services</span>
-        <h2 class="section-title">What I Bring to the Table</h2>
+      <div class="sec-row">
+        <div class="sec-label"><span class="sec-num">02</span><span>Skills &amp; Services</span></div>
+        <h2 class="sec-heading reveal">What I <em>bring</em><br>to the table</h2>
       </div>
-      <div class="skills-grid">
 
-        <!-- Digital Marketing -->
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <div class="skill-card-number">01</div>
-          <h3 class="skill-card-title">Digital Marketing</h3>
-          <p class="skill-card-desc">
-            I specialize in SEO, content marketing, and growth strategies to increase
-            visibility, traffic, and conversions.
-          </p>
-          <div class="skill-card-tools">
-            <span class="tool-pill">Google Analytics</span>
-            <span class="tool-pill">Search Console</span>
-            <span class="tool-pill">Google Ads</span>
-            <span class="tool-pill">RankMath</span>
-            <span class="tool-pill">Canva</span>
+      <div class="bento-grid reveal">
+
+        <div class="bento bento-blue bento-wide">
+          <div class="bento-inner">
+            <div class="bento-n">01</div>
+            <div class="bento-ico"><i class="fas fa-chart-line"></i></div>
+            <h3>Digital Marketing</h3>
+            <p>SEO, content marketing, and growth strategies to increase visibility, traffic, and conversions.</p>
+            <div class="bento-chips">
+              <span>Google Analytics</span><span>Search Console</span>
+              <span>Google Ads</span><span>RankMath</span><span>Canva</span>
+            </div>
           </div>
         </div>
 
-        <!-- Web Development -->
-        <div class="skill-card skill-card-green reveal">
-          <div class="skill-card-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="skill-card-number">02</div>
-          <h3 class="skill-card-title">Web Development</h3>
-          <p class="skill-card-desc">
-            I build responsive and user-friendly websites using WordPress and Wix
-            with basic HTML and CSS customization.
-          </p>
-          <div class="skill-card-tools">
-            <span class="tool-pill">WordPress</span>
-            <span class="tool-pill">GitHub</span>
-            <span class="tool-pill">Wix</span>
-            <span class="tool-pill">HTML</span>
-            <span class="tool-pill">CSS</span>
+        <div class="bento bento-green">
+          <div class="bento-inner">
+            <div class="bento-n">02</div>
+            <div class="bento-ico"><i class="fas fa-code"></i></div>
+            <h3>Web Development</h3>
+            <p>Responsive, user-friendly websites with WordPress, Wix, and HTML/CSS.</p>
+            <div class="bento-chips">
+              <span>WordPress</span><span>GitHub</span>
+              <span>Wix</span><span>HTML</span><span>CSS</span>
+            </div>
           </div>
         </div>
 
-        <!-- Content Creation -->
-        <div class="skill-card reveal">
-          <div class="skill-card-icon">
-            <i class="fas fa-pen-fancy"></i>
-          </div>
-          <div class="skill-card-number">03</div>
-          <h3 class="skill-card-title">Content Creation</h3>
-          <p class="skill-card-desc">
-            I create content related to technology, business, and life sciences
-            using cutting-edge AI tools.
-          </p>
-          <div class="skill-card-tools">
-            <span class="tool-pill">ChatGPT</span>
-            <span class="tool-pill">Gemini</span>
-            <span class="tool-pill">Claude</span>
-            <span class="tool-pill">DeepSeek</span>
-            <span class="tool-pill">Canva</span>
+        <div class="bento bento-dark">
+          <div class="bento-inner">
+            <div class="bento-n">03</div>
+            <div class="bento-ico"><i class="fas fa-pen-fancy"></i></div>
+            <h3>Content Creation</h3>
+            <p>Technology, business, and life sciences content powered by AI tools.</p>
+            <div class="bento-chips">
+              <span>ChatGPT</span><span>Gemini</span>
+              <span>Claude</span><span>DeepSeek</span><span>Canva</span>
+            </div>
           </div>
         </div>
 
@@ -217,68 +210,70 @@
     </div>
   </section>
 
-  <!-- ========== EXPERIENCE ========== -->
-  <section class="section experience-section" id="experience">
+  <!-- ====== EXPERIENCE ====== -->
+  <section class="section exp-section" id="experience">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-briefcase"></i> Experience</span>
-        <h2 class="section-title">My Professional Journey</h2>
+      <div class="sec-row">
+        <div class="sec-label"><span class="sec-num">03</span><span>Experience</span></div>
+        <h2 class="sec-heading reveal">Professional<br><em>Journey</em></h2>
       </div>
-      <div class="timeline">
 
-        <!-- BTW Group -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
+      <div class="exp-list">
+
+        <div class="exp-card reveal">
+          <div class="exp-accent exp-accent-blue"></div>
+          <div class="exp-card-inner">
+            <div class="exp-top">
               <div>
-                <h3 class="timeline-role">Digital Marketing Executive / Web Developer</h3>
-                <span class="timeline-company"><i class="fas fa-building"></i> BTW Group</span>
+                <h3 class="exp-role">Digital Marketing Executive / Web Developer</h3>
+                <p class="exp-co"><i class="fas fa-building"></i> BTW Group</p>
               </div>
-              <span class="timeline-date">Feb 2024 – Present</span>
+              <div class="exp-right-meta">
+                <span class="exp-period">Feb 2024 – Present</span>
+                <span class="exp-current-badge">Current</span>
+              </div>
             </div>
-            <div class="timeline-badge timeline-badge-current">Current</div>
-            <ul class="timeline-list">
-              <li><i class="fas fa-check-circle"></i> Managing websites using WordPress and Wix</li>
-              <li><i class="fas fa-check-circle"></i> Implementing SEO strategies for improved rankings</li>
-              <li><i class="fas fa-check-circle"></i> Running and optimizing marketing campaigns</li>
-              <li><i class="fas fa-check-circle"></i> Leveraging analytics tools for data-driven decisions</li>
-              <li><i class="fas fa-check-circle"></i> Automating workflows using AI tools</li>
+            <ul class="exp-ul">
+              <li>Managing websites using WordPress and Wix</li>
+              <li>Implementing SEO strategies for improved rankings</li>
+              <li>Running and optimizing marketing campaigns</li>
+              <li>Leveraging analytics tools for data-driven decisions</li>
+              <li>Automating workflows using AI tools</li>
             </ul>
           </div>
         </div>
 
-        <!-- CA Firm -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot timeline-dot-green"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
+        <div class="exp-card reveal">
+          <div class="exp-accent exp-accent-green"></div>
+          <div class="exp-card-inner">
+            <div class="exp-top">
               <div>
-                <h3 class="timeline-role">Office &amp; Accounts Assistant</h3>
-                <span class="timeline-company"><i class="fas fa-building"></i> CA Firm</span>
+                <h3 class="exp-role">Office &amp; Accounts Assistant</h3>
+                <p class="exp-co"><i class="fas fa-building"></i> CA Firm</p>
               </div>
-              <span class="timeline-date">Dec 2023 – Feb 2024</span>
+              <div class="exp-right-meta">
+                <span class="exp-period">Dec 2023 – Feb 2024</span>
+              </div>
             </div>
-            <ul class="timeline-list">
-              <li><i class="fas fa-check-circle"></i> Accounting and documentation</li>
-              <li><i class="fas fa-check-circle"></i> Office operations support</li>
+            <ul class="exp-ul">
+              <li>Accounting and documentation</li>
+              <li>Office operations support</li>
             </ul>
           </div>
         </div>
 
-        <!-- Ecom Retails -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
+        <div class="exp-card reveal">
+          <div class="exp-accent exp-accent-blue"></div>
+          <div class="exp-card-inner">
+            <div class="exp-top">
               <div>
-                <h3 class="timeline-role">E-Commerce &amp; SEO Executive</h3>
-                <span class="timeline-company"><i class="fas fa-building"></i> Ecom Retails India Pvt. Ltd.</span>
+                <h3 class="exp-role">E-Commerce &amp; SEO Executive</h3>
+                <p class="exp-co"><i class="fas fa-building"></i> Ecom Retails India Pvt. Ltd.</p>
               </div>
             </div>
-            <ul class="timeline-list">
-              <li><i class="fas fa-check-circle"></i> Product listings and SEO optimization</li>
-              <li><i class="fas fa-check-circle"></i> Website updates and promotional campaigns</li>
+            <ul class="exp-ul">
+              <li>Product listings and SEO optimization</li>
+              <li>Website updates and promotional campaigns</li>
             </ul>
           </div>
         </div>
@@ -287,169 +282,154 @@
     </div>
   </section>
 
-  <!-- ========== EDUCATION ========== -->
-  <section class="section education-section" id="education">
+  <!-- ====== EDUCATION ====== -->
+  <section class="section edu-section" id="education">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-graduation-cap"></i> Education</span>
-        <h2 class="section-title">Academic Background</h2>
+      <div class="sec-row">
+        <div class="sec-label"><span class="sec-num">04</span><span>Education</span></div>
+        <h2 class="sec-heading reveal">Academic<br><em>Background</em></h2>
       </div>
-      <div class="edu-grid">
-
+      <div class="edu-cards">
         <div class="edu-card reveal">
-          <div class="edu-icon"><i class="fas fa-university"></i></div>
-          <div class="edu-body">
+          <div class="edu-ico blue-ico"><i class="fas fa-university"></i></div>
+          <div class="edu-info">
             <span class="edu-badge">Pursuing</span>
-            <h3 class="edu-degree">MBA (Finance)</h3>
-            <p class="edu-school">D.Y. Patil University</p>
+            <h3>MBA (Finance)</h3>
+            <p>D.Y. Patil University</p>
           </div>
         </div>
-
         <div class="edu-card reveal">
-          <div class="edu-icon edu-icon-green"><i class="fas fa-graduation-cap"></i></div>
-          <div class="edu-body">
-            <h3 class="edu-degree">Bachelor of Commerce (B.Com)</h3>
-            <p class="edu-school">Mumbai University</p>
+          <div class="edu-ico green-ico"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-info">
+            <h3>Bachelor of Commerce</h3>
+            <p>Mumbai University</p>
           </div>
         </div>
-
         <div class="edu-card reveal">
-          <div class="edu-icon"><i class="fas fa-school"></i></div>
-          <div class="edu-body">
-            <h3 class="edu-degree">12th — Commerce</h3>
-            <p class="edu-school">R. M. Bhatt College</p>
+          <div class="edu-ico blue-ico"><i class="fas fa-school"></i></div>
+          <div class="edu-info">
+            <h3>12th — Commerce</h3>
+            <p>R. M. Bhatt College</p>
           </div>
         </div>
-
         <div class="edu-card reveal">
-          <div class="edu-icon edu-icon-green"><i class="fas fa-book-open"></i></div>
-          <div class="edu-body">
-            <h3 class="edu-degree">10th — SSC</h3>
-            <p class="edu-school">Loknete Babasaheb Chorekar Vidyalaya</p>
+          <div class="edu-ico green-ico"><i class="fas fa-book-open"></i></div>
+          <div class="edu-info">
+            <h3>10th — SSC</h3>
+            <p>Loknete Babasaheb Chorekar Vidyalaya</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ========== TOOLS ========== -->
+  <!-- ====== TOOLS ====== -->
   <section class="section tools-section" id="tools">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-tools"></i> Tools</span>
-        <h2 class="section-title">My Toolkit</h2>
-        <p class="section-sub">Technologies and platforms I work with daily</p>
+      <div class="sec-row">
+        <div class="sec-label"><span class="sec-num">05</span><span>My Toolkit</span></div>
+        <h2 class="sec-heading reveal">Tools I<br><em>work with</em></h2>
       </div>
-      <div class="tools-marquee-wrapper reveal">
-        <div class="tools-marquee">
-          <div class="tools-track">
-            <span class="tool-item"><i class="fab fa-wordpress"></i> WordPress</span>
-            <span class="tool-item"><i class="fas fa-globe"></i> Wix</span>
-            <span class="tool-item"><i class="fab fa-html5"></i> HTML</span>
-            <span class="tool-item"><i class="fab fa-css3-alt"></i> CSS</span>
-            <span class="tool-item"><i class="fas fa-chart-bar"></i> Google Analytics</span>
-            <span class="tool-item"><i class="fas fa-search"></i> Search Console</span>
-            <span class="tool-item"><i class="fas fa-ad"></i> Google Ads</span>
-            <span class="tool-item"><i class="fas fa-chart-pie"></i> SEMrush</span>
-            <span class="tool-item"><i class="fas fa-bullseye"></i> Ubersuggest</span>
-            <span class="tool-item"><i class="fas fa-star"></i> RankMath</span>
-            <span class="tool-item"><i class="fas fa-palette"></i> Canva</span>
-            <span class="tool-item"><i class="fas fa-robot"></i> ChatGPT</span>
-            <span class="tool-item"><i class="fas fa-gem"></i> Gemini</span>
-            <span class="tool-item"><i class="fas fa-brain"></i> Claude</span>
-            <span class="tool-item"><i class="fas fa-microchip"></i> DeepSeek</span>
-            <span class="tool-item"><i class="fas fa-bolt"></i> Grok</span>
-            <span class="tool-item"><i class="fas fa-question-circle"></i> Perplexity</span>
-            <span class="tool-item"><i class="fas fa-image"></i> Leonardo AI</span>
-            <!-- Duplicate for seamless loop -->
-            <span class="tool-item"><i class="fab fa-wordpress"></i> WordPress</span>
-            <span class="tool-item"><i class="fas fa-globe"></i> Wix</span>
-            <span class="tool-item"><i class="fab fa-html5"></i> HTML</span>
-            <span class="tool-item"><i class="fab fa-css3-alt"></i> CSS</span>
-            <span class="tool-item"><i class="fas fa-chart-bar"></i> Google Analytics</span>
-            <span class="tool-item"><i class="fas fa-search"></i> Search Console</span>
-            <span class="tool-item"><i class="fas fa-ad"></i> Google Ads</span>
-            <span class="tool-item"><i class="fas fa-chart-pie"></i> SEMrush</span>
-            <span class="tool-item"><i class="fas fa-bullseye"></i> Ubersuggest</span>
-            <span class="tool-item"><i class="fas fa-star"></i> RankMath</span>
-            <span class="tool-item"><i class="fas fa-palette"></i> Canva</span>
-            <span class="tool-item"><i class="fas fa-robot"></i> ChatGPT</span>
-            <span class="tool-item"><i class="fas fa-gem"></i> Gemini</span>
-            <span class="tool-item"><i class="fas fa-brain"></i> Claude</span>
-            <span class="tool-item"><i class="fas fa-microchip"></i> DeepSeek</span>
-            <span class="tool-item"><i class="fas fa-bolt"></i> Grok</span>
-            <span class="tool-item"><i class="fas fa-question-circle"></i> Perplexity</span>
-            <span class="tool-item"><i class="fas fa-image"></i> Leonardo AI</span>
-          </div>
+    </div>
+    <div class="marquee-wrap reveal">
+      <div class="mq-row mq-fwd">
+        <div class="mq-track">
+          <span class="tchip"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="tchip"><i class="fas fa-globe"></i> Wix</span>
+          <span class="tchip"><i class="fab fa-html5"></i> HTML</span>
+          <span class="tchip"><i class="fab fa-css3-alt"></i> CSS</span>
+          <span class="tchip"><i class="fas fa-chart-bar"></i> Google Analytics</span>
+          <span class="tchip"><i class="fas fa-search"></i> Search Console</span>
+          <span class="tchip"><i class="fas fa-ad"></i> Google Ads</span>
+          <span class="tchip"><i class="fas fa-chart-pie"></i> SEMrush</span>
+          <span class="tchip"><i class="fas fa-bullseye"></i> Ubersuggest</span>
+          <span class="tchip"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="tchip"><i class="fas fa-globe"></i> Wix</span>
+          <span class="tchip"><i class="fab fa-html5"></i> HTML</span>
+          <span class="tchip"><i class="fab fa-css3-alt"></i> CSS</span>
+          <span class="tchip"><i class="fas fa-chart-bar"></i> Google Analytics</span>
+          <span class="tchip"><i class="fas fa-search"></i> Search Console</span>
+          <span class="tchip"><i class="fas fa-ad"></i> Google Ads</span>
+          <span class="tchip"><i class="fas fa-chart-pie"></i> SEMrush</span>
+          <span class="tchip"><i class="fas fa-bullseye"></i> Ubersuggest</span>
+        </div>
+      </div>
+      <div class="mq-row mq-rev">
+        <div class="mq-track">
+          <span class="tchip tchip-green"><i class="fas fa-star"></i> RankMath</span>
+          <span class="tchip tchip-green"><i class="fas fa-palette"></i> Canva</span>
+          <span class="tchip tchip-green"><i class="fas fa-robot"></i> ChatGPT</span>
+          <span class="tchip tchip-green"><i class="fas fa-gem"></i> Gemini</span>
+          <span class="tchip tchip-green"><i class="fas fa-brain"></i> Claude</span>
+          <span class="tchip tchip-green"><i class="fas fa-microchip"></i> DeepSeek</span>
+          <span class="tchip tchip-green"><i class="fas fa-bolt"></i> Grok</span>
+          <span class="tchip tchip-green"><i class="fas fa-question-circle"></i> Perplexity</span>
+          <span class="tchip tchip-green"><i class="fas fa-image"></i> Leonardo AI</span>
+          <span class="tchip tchip-green"><i class="fas fa-star"></i> RankMath</span>
+          <span class="tchip tchip-green"><i class="fas fa-palette"></i> Canva</span>
+          <span class="tchip tchip-green"><i class="fas fa-robot"></i> ChatGPT</span>
+          <span class="tchip tchip-green"><i class="fas fa-gem"></i> Gemini</span>
+          <span class="tchip tchip-green"><i class="fas fa-brain"></i> Claude</span>
+          <span class="tchip tchip-green"><i class="fas fa-microchip"></i> DeepSeek</span>
+          <span class="tchip tchip-green"><i class="fas fa-bolt"></i> Grok</span>
+          <span class="tchip tchip-green"><i class="fas fa-question-circle"></i> Perplexity</span>
+          <span class="tchip tchip-green"><i class="fas fa-image"></i> Leonardo AI</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
+  <!-- ====== CONTACT ====== -->
   <section class="section contact-section" id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
-        <h2 class="section-title">Let's Work Together</h2>
-        <p class="section-sub">Have a project in mind? Let's talk.</p>
-      </div>
       <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div class="contact-card">
-            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <h4>Location</h4>
-              <p>Mumbai, India</p>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon contact-icon-green"><i class="fas fa-envelope"></i></div>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:ajitm272@gmail.com">ajitm272@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon"><i class="fab fa-telegram"></i></div>
-            <div>
-              <h4>Telegram</h4>
-              <a href="https://t.me/AjitMane" target="_blank" rel="noopener">@AjitMane</a>
-            </div>
-          </div>
-          <div class="contact-social">
-            <a href="mailto:ajitm272@gmail.com" class="social-btn" aria-label="Email">
-              <i class="fas fa-envelope"></i>
+        <div class="contact-left reveal">
+          <div class="sec-label"><span class="sec-num">06</span><span>Contact</span></div>
+          <h2 class="sec-heading">Let's work<br><em>together</em></h2>
+          <p class="contact-sub">Have a project in mind? Let's build something amazing.</p>
+          <div class="contact-links">
+            <a href="mailto:ajitm272@gmail.com" class="cl-item">
+              <div class="cl-ico blue-ico"><i class="fas fa-envelope"></i></div>
+              <div><div class="cl-label">Email</div><div class="cl-val">ajitm272@gmail.com</div></div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
             </a>
-            <a href="https://t.me/AjitMane" target="_blank" rel="noopener" class="social-btn social-btn-green" aria-label="Telegram">
-              <i class="fab fa-telegram"></i>
+            <a href="https://t.me/AjitMane" target="_blank" rel="noopener" class="cl-item">
+              <div class="cl-ico green-ico"><i class="fab fa-telegram"></i></div>
+              <div><div class="cl-label">Telegram</div><div class="cl-val">@AjitMane</div></div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
             </a>
+            <div class="cl-item">
+              <div class="cl-ico blue-ico"><i class="fas fa-map-marker-alt"></i></div>
+              <div><div class="cl-label">Location</div><div class="cl-val">Mumbai, India</div></div>
+            </div>
           </div>
         </div>
-        <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+        <div class="contact-right reveal">
+          <form class="cform" id="contactForm" novalidate>
+            <div class="cform-row">
+              <div class="cform-group">
+                <label for="cname">Name</label>
+                <input type="text" id="cname" name="name" placeholder="Your name" required />
+              </div>
+              <div class="cform-group">
+                <label for="cemail">Email</label>
+                <input type="email" id="cemail" name="email" placeholder="your@email.com" required />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            <div class="cform-group">
+              <label for="csubject">Subject</label>
+              <input type="text" id="csubject" name="subject" placeholder="Project inquiry" />
             </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
+            <div class="cform-group">
+              <label for="cmessage">Message</label>
+              <textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
             </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
+            <button type="submit" class="cform-btn">
               Send Message <i class="fas fa-paper-plane"></i>
             </button>
             <div class="form-success" id="formSuccess">
-              <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+              <i class="fas fa-check-circle"></i> Message sent! I'll be in touch soon.
             </div>
           </form>
         </div>
@@ -457,15 +437,16 @@
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ====== FOOTER ====== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
-        <p class="footer-name">Ajit Mane</p>
-        <p class="footer-copy">© 2024 Ajit Mane. Crafted with <i class="fas fa-heart"></i> in Mumbai.</p>
-        <a href="#home" class="back-to-top" aria-label="Back to top">
-          <i class="fas fa-arrow-up"></i>
-        </a>
+      <div class="footer-row">
+        <div class="footer-brand">
+          <span class="bracket">[</span>AM<span class="bracket">]</span>
+          <span class="footer-name">Ajit Mane</span>
+        </div>
+        <p class="footer-copy">© 2024 Ajit Mane · Made with <i class="fas fa-heart"></i> in Mumbai</p>
+        <a href="#home" class="top-btn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
       </div>
     </div>
   </footer>
