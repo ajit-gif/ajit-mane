@@ -1,155 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ajit Mane — Digital Marketing & Web Development</title>
-  <meta name="description" content="Results-driven Digital Marketing Executive with 2+ years of experience in SEO, social media marketing, and performance campaigns." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AJIT MANE — Digital Marketing & Web Development</title>
+  <meta name="description" content="Results-driven Digital Marketing Executive with 2+ years of experience in SEO, social media marketing, and performance campaigns."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- ====== NAVBAR ====== -->
+  <!-- Scan line overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <!-- Noise grain -->
+  <canvas class="grain" id="grainCanvas" aria-hidden="true"></canvas>
+
+  <!-- ═══ NAVBAR ═══ -->
   <nav class="navbar" id="navbar">
-    <div class="nav-inner">
+    <div class="nav-wrap">
       <a href="#home" class="nav-logo">
-        <span class="bracket">[</span>AM<span class="bracket">]</span>
+        <span class="logo-tag">&lt;</span>AM<span class="logo-tag">/&gt;</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home"       class="nav-link active">Home</a></li>
-        <li><a href="#about"      class="nav-link">About</a></li>
-        <li><a href="#skills"     class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#education"  class="nav-link">Education</a></li>
-        <li><a href="#tools"      class="nav-link">Tools</a></li>
-        <li><a href="#contact"    class="nav-link">Contact</a></li>
-      </ul>
-      <a href="#contact" class="nav-hire">Hire Me <i class="fas fa-arrow-right"></i></a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <div class="nav-center">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home"       class="nl active">HOME</a></li>
+          <li><a href="#about"      class="nl">ABOUT</a></li>
+          <li><a href="#skills"     class="nl">SKILLS</a></li>
+          <li><a href="#experience" class="nl">EXP</a></li>
+          <li><a href="#education"  class="nl">EDU</a></li>
+          <li><a href="#tools"      class="nl">TOOLS</a></li>
+          <li><a href="#contact"    class="nl">CONTACT</a></li>
+        </ul>
+      </div>
+      <a href="#contact" class="nav-cta">HIRE ME <i class="fas fa-terminal"></i></a>
+      <button class="burger" id="burger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ====== HERO ====== -->
+  <!-- ═══ HERO ═══ -->
   <section class="hero" id="home">
-    <div class="hero-bg-accent"></div>
-    <div class="hero-dots"></div>
+    <!-- Animated grid -->
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <!-- Glowing orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
 
-    <div class="hero-grid">
-      <!-- Left -->
-      <div class="hero-left">
-        <div class="hero-eyebrow">
-          <div class="eyebrow-dot"></div>
-          <span>Mumbai, India &nbsp;·&nbsp; Available for Freelance</span>
-        </div>
-        <h1 class="hero-h1">
-          <span class="h1-italic">Digital</span>
-          <span class="h1-bold">Marketing</span>
-          <span class="h1-outlined">Executive</span>
-        </h1>
-        <p class="hero-tagline">
-          Results-driven professional with 2+ years of experience in SEO,
-          social media marketing, and performance campaigns.
-        </p>
-        <div class="hero-btns">
-          <a href="#skills" class="btn-blue">Explore Work</a>
-          <a href="#contact" class="btn-outline-green">Let's Talk</a>
+    <div class="hero-content">
+      <!-- Status bar -->
+      <div class="status-bar">
+        <span class="status-ping"></span>
+        <span class="mono">STATUS: AVAILABLE FOR FREELANCE</span>
+        <span class="status-sep">///</span>
+        <span class="mono">LOC: MUMBAI.IN</span>
+      </div>
+
+      <!-- Giant name -->
+      <div class="hero-name-block">
+        <div class="hero-firstname">AJIT</div>
+        <div class="hero-lastname">
+          <span>MANE</span>
+          <div class="hero-line-deco"></div>
         </div>
       </div>
 
-      <!-- Right -->
-      <div class="hero-right">
-        <div class="id-card">
-          <div class="id-card-stripe"></div>
-          <div class="id-avatar">AM</div>
-          <div class="id-name">Ajit Mane</div>
-          <div class="id-title">Digital Marketing Executive<br>&amp; Web Developer</div>
-          <div class="id-tags">
-            <span>SEO</span>
-            <span>WordPress</span>
-            <span>Google Ads</span>
-            <span>AI Tools</span>
-          </div>
-          <div class="id-footer">
-            <i class="fas fa-map-marker-alt"></i> Mumbai, India
-          </div>
-        </div>
+      <!-- Role tags -->
+      <div class="hero-roles">
+        <span class="role-chip chip-blue"><i class="fas fa-chart-line"></i> DIGITAL MARKETING</span>
+        <span class="role-chip chip-green"><i class="fas fa-code"></i> WEB DEVELOPER</span>
+        <span class="role-chip chip-dim"><i class="fas fa-robot"></i> AI TOOLS EXPERT</span>
+      </div>
 
-        <div class="stat-pills">
-          <div class="stat-pill pill-blue">
-            <span class="pill-num">2+</span>
-            <span class="pill-label">Years Exp.</span>
-          </div>
-          <div class="stat-pill pill-green">
-            <span class="pill-num">18+</span>
-            <span class="pill-label">Tools Used</span>
-          </div>
-          <div class="stat-pill pill-blue">
-            <span class="pill-num">3</span>
-            <span class="pill-label">Specialties</span>
-          </div>
+      <!-- Tagline -->
+      <p class="hero-tagline">
+        Results-driven professional with <span class="accent-blue">2+ years</span> of experience
+        in SEO, social media marketing, and performance campaigns. Specializing in
+        <span class="accent-green">data-driven growth</span>.
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-ctas">
+        <a href="#skills" class="cta-primary">
+          <span class="cta-bg"></span>
+          <span class="cta-text">EXPLORE WORK <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="#contact" class="cta-ghost">
+          GET IN TOUCH <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+
+      <!-- Stats row -->
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-n">02<span class="hstat-plus">+</span></div>
+          <div class="hstat-l">YEARS<br>EXP</div>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <div class="hstat-n">18<span class="hstat-plus">+</span></div>
+          <div class="hstat-l">TOOLS<br>MASTERED</div>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <div class="hstat-n">03</div>
+          <div class="hstat-l">CORE<br>SKILLS</div>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <div class="hstat-n">100<span class="hstat-plus">%</span></div>
+          <div class="hstat-l">CLIENT<br>FOCUS</div>
         </div>
       </div>
     </div>
 
-    <!-- Scrolling ticker -->
-    <div class="ticker-bar">
-      <div class="ticker-track">
-        <span>SEO Optimization</span><em>◆</em>
-        <span>Web Development</span><em>◆</em>
-        <span>Content Creation</span><em>◆</em>
-        <span>Google Analytics</span><em>◆</em>
-        <span>Performance Marketing</span><em>◆</em>
-        <span>AI-Powered Workflows</span><em>◆</em>
-        <span>WordPress &amp; Wix</span><em>◆</em>
-        <span>SEO Optimization</span><em>◆</em>
-        <span>Web Development</span><em>◆</em>
-        <span>Content Creation</span><em>◆</em>
-        <span>Google Analytics</span><em>◆</em>
-        <span>Performance Marketing</span><em>◆</em>
-        <span>AI-Powered Workflows</span><em>◆</em>
-        <span>WordPress &amp; Wix</span><em>◆</em>
+    <!-- Side decoration -->
+    <div class="hero-side-deco" aria-hidden="true">
+      <div class="side-label">SCROLL DOWN</div>
+      <div class="side-line"></div>
+    </div>
+
+    <!-- Scrolling bottom ticker -->
+    <div class="ticker-outer">
+      <div class="ticker-inner">
+        <span>SEO OPTIMIZATION</span><b>▸</b>
+        <span>WEB DEVELOPMENT</span><b>▸</b>
+        <span>CONTENT CREATION</span><b>▸</b>
+        <span>GOOGLE ANALYTICS</span><b>▸</b>
+        <span>PERFORMANCE MARKETING</span><b>▸</b>
+        <span>AI-POWERED WORKFLOWS</span><b>▸</b>
+        <span>WORDPRESS & WIX</span><b>▸</b>
+        <span>SEO OPTIMIZATION</span><b>▸</b>
+        <span>WEB DEVELOPMENT</span><b>▸</b>
+        <span>CONTENT CREATION</span><b>▸</b>
+        <span>GOOGLE ANALYTICS</span><b>▸</b>
+        <span>PERFORMANCE MARKETING</span><b>▸</b>
+        <span>AI-POWERED WORKFLOWS</span><b>▸</b>
+        <span>WORDPRESS & WIX</span><b>▸</b>
       </div>
     </div>
   </section>
 
-  <!-- ====== ABOUT ====== -->
-  <section class="section about-section" id="about">
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section about-sec" id="about">
     <div class="container">
+      <div class="sec-eyebrow">
+        <span class="mono accent-blue">// 01</span>
+        <span class="eyebrow-line"></span>
+        <span class="mono">ABOUT_ME.exe</span>
+      </div>
+
       <div class="about-grid">
         <div class="about-left reveal">
-          <div class="sec-label"><span class="sec-num">01</span><span>About Me</span></div>
-          <h2 class="sec-heading">
-            The person<br><em>behind the screen</em>
-          </h2>
-          <blockquote class="big-quote">
-            "Do what you love and you'll never have a problem with Mondays."
-          </blockquote>
-          <div class="about-location">
-            <i class="fas fa-map-marker-alt"></i> Mumbai, India &nbsp;·&nbsp;
-            <i class="fas fa-briefcase"></i> Freelancer
+          <h2 class="sec-title">THE PERSON<br><em>BEHIND THE</em><br>SCREEN</h2>
+
+          <div class="glass-card quote-card">
+            <div class="quote-glyph">"</div>
+            <p>Do what you love and you'll never have a problem with Mondays.</p>
+          </div>
+
+          <div class="info-chips">
+            <div class="info-chip">
+              <i class="fas fa-map-marker-alt" style="color:var(--blue)"></i>
+              <span>Mumbai, India</span>
+            </div>
+            <div class="info-chip">
+              <i class="fas fa-briefcase" style="color:var(--green)"></i>
+              <span>Freelancer</span>
+            </div>
+            <div class="info-chip">
+              <i class="fas fa-circle" style="color:var(--green);font-size:.5rem"></i>
+              <span>Available Now</span>
+            </div>
           </div>
         </div>
+
         <div class="about-right reveal">
-          <div class="about-avatar-block">
-            <div class="av-circle">AM</div>
-            <div class="av-ring"></div>
+          <div class="av-block">
+            <div class="av-hex">
+              <div class="av-inner">AM</div>
+            </div>
+            <div class="av-rings">
+              <div class="av-ring r1"></div>
+              <div class="av-ring r2"></div>
+            </div>
           </div>
-          <p class="body-text">I am a passionate <strong>Digital Marketing Executive and Web Developer</strong> working as a freelancer. I enjoy solving real-world problems using digital solutions and continuous learning.</p>
-          <p class="body-text">With over <strong>2 years of experience</strong>, I have worked on SEO, website development, and content strategies. I actively use <strong>AI tools</strong> to improve productivity and stay updated with modern digital trends.</p>
-          <div class="tag-group">
-            <div class="tg-label">Other Skills</div>
-            <div class="tg-tags">
-              <span><i class="fas fa-search"></i> SEO Optimization</span>
-              <span><i class="fas fa-pen-nib"></i> Content Marketing</span>
-              <span><i class="fas fa-cloud"></i> Basic DevOps &amp; AWS</span>
-              <span><i class="fas fa-users"></i> Teamwork &amp; Communication</span>
-              <span><i class="fas fa-lightbulb"></i> Problem Solving</span>
+
+          <p class="about-text">I am a passionate <mark class="mk-blue">Digital Marketing Executive and Web Developer</mark> working as a freelancer. I enjoy solving real-world problems using digital solutions and continuous learning.</p>
+          <p class="about-text">With over <mark class="mk-green">2 years of experience</mark>, I have worked on SEO, website development, and content strategies. I actively use <mark class="mk-blue">AI tools</mark> to improve productivity and stay updated with modern digital trends.</p>
+
+          <div class="skill-tag-grid">
+            <div class="stag-label"><span class="mono accent-blue">SKILLS[]</span></div>
+            <div class="stag-wrap">
+              <span class="stag"><i class="fas fa-search"></i> SEO Optimization</span>
+              <span class="stag"><i class="fas fa-pen-nib"></i> Content Marketing</span>
+              <span class="stag"><i class="fas fa-cloud"></i> DevOps &amp; AWS</span>
+              <span class="stag"><i class="fas fa-users"></i> Teamwork</span>
+              <span class="stag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
             </div>
           </div>
         </div>
@@ -157,83 +208,105 @@
     </div>
   </section>
 
-  <!-- ====== SKILLS ====== -->
-  <section class="section skills-section" id="skills">
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section skills-sec" id="skills">
     <div class="container">
-      <div class="sec-row">
-        <div class="sec-label"><span class="sec-num">02</span><span>Skills &amp; Services</span></div>
-        <h2 class="sec-heading reveal">What I <em>bring</em><br>to the table</h2>
+      <div class="sec-eyebrow">
+        <span class="mono accent-green">// 02</span>
+        <span class="eyebrow-line"></span>
+        <span class="mono">SKILLS_SERVICES.json</span>
       </div>
+      <h2 class="sec-title reveal">WHAT I <em>BRING</em><br>TO THE TABLE</h2>
 
-      <div class="bento-grid reveal">
+      <div class="services-grid">
 
-        <div class="bento bento-blue bento-wide">
-          <div class="bento-inner">
-            <div class="bento-n">01</div>
-            <div class="bento-ico"><i class="fas fa-chart-line"></i></div>
-            <h3>Digital Marketing</h3>
-            <p>SEO, content marketing, and growth strategies to increase visibility, traffic, and conversions.</p>
-            <div class="bento-chips">
-              <span>Google Analytics</span><span>Search Console</span>
-              <span>Google Ads</span><span>RankMath</span><span>Canva</span>
-            </div>
+        <div class="svc-card svc-blue reveal">
+          <div class="svc-glow"></div>
+          <div class="svc-header">
+            <div class="svc-num">01</div>
+            <div class="svc-icon"><i class="fas fa-chart-line"></i></div>
           </div>
+          <h3 class="svc-title">DIGITAL<br>MARKETING</h3>
+          <p class="svc-desc">SEO, content marketing, and growth strategies to increase visibility, traffic, and conversions.</p>
+          <div class="svc-tools">
+            <span>Google Analytics</span>
+            <span>Search Console</span>
+            <span>Google Ads</span>
+            <span>RankMath</span>
+            <span>Canva</span>
+          </div>
+          <div class="svc-corner-deco"></div>
         </div>
 
-        <div class="bento bento-green">
-          <div class="bento-inner">
-            <div class="bento-n">02</div>
-            <div class="bento-ico"><i class="fas fa-code"></i></div>
-            <h3>Web Development</h3>
-            <p>Responsive, user-friendly websites with WordPress, Wix, and HTML/CSS.</p>
-            <div class="bento-chips">
-              <span>WordPress</span><span>GitHub</span>
-              <span>Wix</span><span>HTML</span><span>CSS</span>
-            </div>
+        <div class="svc-card svc-green reveal">
+          <div class="svc-glow"></div>
+          <div class="svc-header">
+            <div class="svc-num">02</div>
+            <div class="svc-icon"><i class="fas fa-code"></i></div>
           </div>
+          <h3 class="svc-title">WEB<br>DEVELOPMENT</h3>
+          <p class="svc-desc">Responsive, user-friendly websites with WordPress and Wix, with HTML/CSS customization.</p>
+          <div class="svc-tools">
+            <span>WordPress</span>
+            <span>GitHub</span>
+            <span>Wix</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <div class="svc-corner-deco"></div>
         </div>
 
-        <div class="bento bento-dark">
-          <div class="bento-inner">
-            <div class="bento-n">03</div>
-            <div class="bento-ico"><i class="fas fa-pen-fancy"></i></div>
-            <h3>Content Creation</h3>
-            <p>Technology, business, and life sciences content powered by AI tools.</p>
-            <div class="bento-chips">
-              <span>ChatGPT</span><span>Gemini</span>
-              <span>Claude</span><span>DeepSeek</span><span>Canva</span>
-            </div>
+        <div class="svc-card svc-dim reveal">
+          <div class="svc-glow"></div>
+          <div class="svc-header">
+            <div class="svc-num">03</div>
+            <div class="svc-icon"><i class="fas fa-pen-fancy"></i></div>
           </div>
+          <h3 class="svc-title">CONTENT<br>CREATION</h3>
+          <p class="svc-desc">Technology, business, and life sciences content powered by cutting-edge AI tools.</p>
+          <div class="svc-tools">
+            <span>ChatGPT</span>
+            <span>Gemini</span>
+            <span>Claude</span>
+            <span>DeepSeek</span>
+            <span>Canva</span>
+          </div>
+          <div class="svc-corner-deco"></div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ====== EXPERIENCE ====== -->
-  <section class="section exp-section" id="experience">
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section class="section exp-sec" id="experience">
     <div class="container">
-      <div class="sec-row">
-        <div class="sec-label"><span class="sec-num">03</span><span>Experience</span></div>
-        <h2 class="sec-heading reveal">Professional<br><em>Journey</em></h2>
+      <div class="sec-eyebrow">
+        <span class="mono accent-blue">// 03</span>
+        <span class="eyebrow-line"></span>
+        <span class="mono">EXPERIENCE.log</span>
       </div>
+      <h2 class="sec-title reveal">PROFESSIONAL<br><em>JOURNEY</em></h2>
 
-      <div class="exp-list">
+      <div class="exp-timeline">
 
-        <div class="exp-card reveal">
-          <div class="exp-accent exp-accent-blue"></div>
-          <div class="exp-card-inner">
+        <div class="exp-item reveal">
+          <div class="exp-connector">
+            <div class="exp-node node-blue"></div>
+            <div class="exp-track"></div>
+          </div>
+          <div class="glass-card exp-card">
             <div class="exp-top">
               <div>
-                <h3 class="exp-role">Digital Marketing Executive / Web Developer</h3>
-                <p class="exp-co"><i class="fas fa-building"></i> BTW Group</p>
+                <h3 class="exp-role">DIGITAL MARKETING EXECUTIVE<br><span class="role-slash">/</span> WEB DEVELOPER</h3>
+                <p class="exp-company"><i class="fas fa-terminal"></i> BTW GROUP</p>
               </div>
-              <div class="exp-right-meta">
-                <span class="exp-period">Feb 2024 – Present</span>
-                <span class="exp-current-badge">Current</span>
+              <div class="exp-meta">
+                <span class="exp-date mono">FEB 2024 – PRESENT</span>
+                <span class="exp-badge-live"><span class="live-dot"></span>LIVE</span>
               </div>
             </div>
-            <ul class="exp-ul">
+            <ul class="exp-list">
               <li>Managing websites using WordPress and Wix</li>
               <li>Implementing SEO strategies for improved rankings</li>
               <li>Running and optimizing marketing campaigns</li>
@@ -243,35 +316,40 @@
           </div>
         </div>
 
-        <div class="exp-card reveal">
-          <div class="exp-accent exp-accent-green"></div>
-          <div class="exp-card-inner">
+        <div class="exp-item reveal">
+          <div class="exp-connector">
+            <div class="exp-node node-green"></div>
+            <div class="exp-track"></div>
+          </div>
+          <div class="glass-card exp-card">
             <div class="exp-top">
               <div>
-                <h3 class="exp-role">Office &amp; Accounts Assistant</h3>
-                <p class="exp-co"><i class="fas fa-building"></i> CA Firm</p>
+                <h3 class="exp-role">OFFICE &amp; ACCOUNTS ASSISTANT</h3>
+                <p class="exp-company"><i class="fas fa-terminal"></i> CA FIRM</p>
               </div>
-              <div class="exp-right-meta">
-                <span class="exp-period">Dec 2023 – Feb 2024</span>
+              <div class="exp-meta">
+                <span class="exp-date mono">DEC 2023 – FEB 2024</span>
               </div>
             </div>
-            <ul class="exp-ul">
+            <ul class="exp-list">
               <li>Accounting and documentation</li>
               <li>Office operations support</li>
             </ul>
           </div>
         </div>
 
-        <div class="exp-card reveal">
-          <div class="exp-accent exp-accent-blue"></div>
-          <div class="exp-card-inner">
+        <div class="exp-item reveal">
+          <div class="exp-connector">
+            <div class="exp-node node-blue"></div>
+          </div>
+          <div class="glass-card exp-card">
             <div class="exp-top">
               <div>
-                <h3 class="exp-role">E-Commerce &amp; SEO Executive</h3>
-                <p class="exp-co"><i class="fas fa-building"></i> Ecom Retails India Pvt. Ltd.</p>
+                <h3 class="exp-role">E-COMMERCE &amp; SEO EXECUTIVE</h3>
+                <p class="exp-company"><i class="fas fa-terminal"></i> ECOM RETAILS INDIA PVT. LTD.</p>
               </div>
             </div>
-            <ul class="exp-ul">
+            <ul class="exp-list">
               <li>Product listings and SEO optimization</li>
               <li>Website updates and promotional campaigns</li>
             </ul>
@@ -282,56 +360,66 @@
     </div>
   </section>
 
-  <!-- ====== EDUCATION ====== -->
-  <section class="section edu-section" id="education">
+  <!-- ═══ EDUCATION ═══ -->
+  <section class="section edu-sec" id="education">
     <div class="container">
-      <div class="sec-row">
-        <div class="sec-label"><span class="sec-num">04</span><span>Education</span></div>
-        <h2 class="sec-heading reveal">Academic<br><em>Background</em></h2>
+      <div class="sec-eyebrow">
+        <span class="mono accent-green">// 04</span>
+        <span class="eyebrow-line"></span>
+        <span class="mono">EDUCATION.db</span>
       </div>
-      <div class="edu-cards">
-        <div class="edu-card reveal">
-          <div class="edu-ico blue-ico"><i class="fas fa-university"></i></div>
-          <div class="edu-info">
-            <span class="edu-badge">Pursuing</span>
-            <h3>MBA (Finance)</h3>
+      <h2 class="sec-title reveal">ACADEMIC<br><em>BACKGROUND</em></h2>
+
+      <div class="edu-grid">
+        <div class="glass-card edu-card reveal">
+          <div class="edu-ico ico-blue"><i class="fas fa-university"></i></div>
+          <div class="edu-body">
+            <span class="edu-tag">PURSUING</span>
+            <h3>MBA (FINANCE)</h3>
             <p>D.Y. Patil University</p>
           </div>
+          <div class="edu-level-bar" style="--pct:60%"></div>
         </div>
-        <div class="edu-card reveal">
-          <div class="edu-ico green-ico"><i class="fas fa-graduation-cap"></i></div>
-          <div class="edu-info">
-            <h3>Bachelor of Commerce</h3>
+        <div class="glass-card edu-card reveal">
+          <div class="edu-ico ico-green"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-body">
+            <h3>BACHELOR OF COMMERCE</h3>
             <p>Mumbai University</p>
           </div>
+          <div class="edu-level-bar" style="--pct:100%"></div>
         </div>
-        <div class="edu-card reveal">
-          <div class="edu-ico blue-ico"><i class="fas fa-school"></i></div>
-          <div class="edu-info">
-            <h3>12th — Commerce</h3>
+        <div class="glass-card edu-card reveal">
+          <div class="edu-ico ico-blue"><i class="fas fa-school"></i></div>
+          <div class="edu-body">
+            <h3>12TH — COMMERCE</h3>
             <p>R. M. Bhatt College</p>
           </div>
+          <div class="edu-level-bar" style="--pct:100%"></div>
         </div>
-        <div class="edu-card reveal">
-          <div class="edu-ico green-ico"><i class="fas fa-book-open"></i></div>
-          <div class="edu-info">
-            <h3>10th — SSC</h3>
+        <div class="glass-card edu-card reveal">
+          <div class="edu-ico ico-green"><i class="fas fa-book-open"></i></div>
+          <div class="edu-body">
+            <h3>10TH — SSC</h3>
             <p>Loknete Babasaheb Chorekar Vidyalaya</p>
           </div>
+          <div class="edu-level-bar" style="--pct:100%"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== TOOLS ====== -->
-  <section class="section tools-section" id="tools">
+  <!-- ═══ TOOLS ═══ -->
+  <section class="section tools-sec" id="tools">
     <div class="container">
-      <div class="sec-row">
-        <div class="sec-label"><span class="sec-num">05</span><span>My Toolkit</span></div>
-        <h2 class="sec-heading reveal">Tools I<br><em>work with</em></h2>
+      <div class="sec-eyebrow">
+        <span class="mono accent-blue">// 05</span>
+        <span class="eyebrow-line"></span>
+        <span class="mono">TOOLS.config</span>
       </div>
+      <h2 class="sec-title reveal">MY <em>TOOLKIT</em></h2>
     </div>
-    <div class="marquee-wrap reveal">
+
+    <div class="marquee-outer reveal">
       <div class="mq-row mq-fwd">
         <div class="mq-track">
           <span class="tchip"><i class="fab fa-wordpress"></i> WordPress</span>
@@ -356,96 +444,114 @@
       </div>
       <div class="mq-row mq-rev">
         <div class="mq-track">
-          <span class="tchip tchip-green"><i class="fas fa-star"></i> RankMath</span>
-          <span class="tchip tchip-green"><i class="fas fa-palette"></i> Canva</span>
-          <span class="tchip tchip-green"><i class="fas fa-robot"></i> ChatGPT</span>
-          <span class="tchip tchip-green"><i class="fas fa-gem"></i> Gemini</span>
-          <span class="tchip tchip-green"><i class="fas fa-brain"></i> Claude</span>
-          <span class="tchip tchip-green"><i class="fas fa-microchip"></i> DeepSeek</span>
-          <span class="tchip tchip-green"><i class="fas fa-bolt"></i> Grok</span>
-          <span class="tchip tchip-green"><i class="fas fa-question-circle"></i> Perplexity</span>
-          <span class="tchip tchip-green"><i class="fas fa-image"></i> Leonardo AI</span>
-          <span class="tchip tchip-green"><i class="fas fa-star"></i> RankMath</span>
-          <span class="tchip tchip-green"><i class="fas fa-palette"></i> Canva</span>
-          <span class="tchip tchip-green"><i class="fas fa-robot"></i> ChatGPT</span>
-          <span class="tchip tchip-green"><i class="fas fa-gem"></i> Gemini</span>
-          <span class="tchip tchip-green"><i class="fas fa-brain"></i> Claude</span>
-          <span class="tchip tchip-green"><i class="fas fa-microchip"></i> DeepSeek</span>
-          <span class="tchip tchip-green"><i class="fas fa-bolt"></i> Grok</span>
-          <span class="tchip tchip-green"><i class="fas fa-question-circle"></i> Perplexity</span>
-          <span class="tchip tchip-green"><i class="fas fa-image"></i> Leonardo AI</span>
+          <span class="tchip tchip-g"><i class="fas fa-star"></i> RankMath</span>
+          <span class="tchip tchip-g"><i class="fas fa-palette"></i> Canva</span>
+          <span class="tchip tchip-g"><i class="fas fa-robot"></i> ChatGPT</span>
+          <span class="tchip tchip-g"><i class="fas fa-gem"></i> Gemini</span>
+          <span class="tchip tchip-g"><i class="fas fa-brain"></i> Claude</span>
+          <span class="tchip tchip-g"><i class="fas fa-microchip"></i> DeepSeek</span>
+          <span class="tchip tchip-g"><i class="fas fa-bolt"></i> Grok</span>
+          <span class="tchip tchip-g"><i class="fas fa-question-circle"></i> Perplexity</span>
+          <span class="tchip tchip-g"><i class="fas fa-image"></i> Leonardo AI</span>
+          <span class="tchip tchip-g"><i class="fas fa-star"></i> RankMath</span>
+          <span class="tchip tchip-g"><i class="fas fa-palette"></i> Canva</span>
+          <span class="tchip tchip-g"><i class="fas fa-robot"></i> ChatGPT</span>
+          <span class="tchip tchip-g"><i class="fas fa-gem"></i> Gemini</span>
+          <span class="tchip tchip-g"><i class="fas fa-brain"></i> Claude</span>
+          <span class="tchip tchip-g"><i class="fas fa-microchip"></i> DeepSeek</span>
+          <span class="tchip tchip-g"><i class="fas fa-bolt"></i> Grok</span>
+          <span class="tchip tchip-g"><i class="fas fa-question-circle"></i> Perplexity</span>
+          <span class="tchip tchip-g"><i class="fas fa-image"></i> Leonardo AI</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== CONTACT ====== -->
-  <section class="section contact-section" id="contact">
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section contact-sec" id="contact">
     <div class="container">
-      <div class="contact-grid">
+      <div class="sec-eyebrow">
+        <span class="mono accent-green">// 06</span>
+        <span class="eyebrow-line"></span>
+        <span class="mono">CONTACT.init()</span>
+      </div>
+
+      <div class="contact-layout">
         <div class="contact-left reveal">
-          <div class="sec-label"><span class="sec-num">06</span><span>Contact</span></div>
-          <h2 class="sec-heading">Let's work<br><em>together</em></h2>
-          <p class="contact-sub">Have a project in mind? Let's build something amazing.</p>
-          <div class="contact-links">
-            <a href="mailto:ajitm272@gmail.com" class="cl-item">
-              <div class="cl-ico blue-ico"><i class="fas fa-envelope"></i></div>
-              <div><div class="cl-label">Email</div><div class="cl-val">ajitm272@gmail.com</div></div>
-              <i class="fas fa-arrow-right cl-arrow"></i>
+          <h2 class="sec-title">LET'S<br><em>WORK</em><br>TOGETHER</h2>
+          <p class="contact-sub">Have a project in mind? Let's build something electric.</p>
+
+          <div class="contact-items">
+            <a href="mailto:ajitm272@gmail.com" class="c-item">
+              <div class="c-ico ico-blue"><i class="fas fa-envelope"></i></div>
+              <div class="c-info">
+                <div class="c-label mono">EMAIL</div>
+                <div class="c-val">ajitm272@gmail.com</div>
+              </div>
+              <i class="fas fa-arrow-right c-arr"></i>
             </a>
-            <a href="https://t.me/AjitMane" target="_blank" rel="noopener" class="cl-item">
-              <div class="cl-ico green-ico"><i class="fab fa-telegram"></i></div>
-              <div><div class="cl-label">Telegram</div><div class="cl-val">@AjitMane</div></div>
-              <i class="fas fa-arrow-right cl-arrow"></i>
+            <a href="https://t.me/AjitMane" target="_blank" rel="noopener" class="c-item">
+              <div class="c-ico ico-green"><i class="fab fa-telegram"></i></div>
+              <div class="c-info">
+                <div class="c-label mono">TELEGRAM</div>
+                <div class="c-val">@AjitMane</div>
+              </div>
+              <i class="fas fa-arrow-right c-arr"></i>
             </a>
-            <div class="cl-item">
-              <div class="cl-ico blue-ico"><i class="fas fa-map-marker-alt"></i></div>
-              <div><div class="cl-label">Location</div><div class="cl-val">Mumbai, India</div></div>
+            <div class="c-item">
+              <div class="c-ico ico-blue"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="c-info">
+                <div class="c-label mono">LOCATION</div>
+                <div class="c-val">Mumbai, India</div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="contact-right reveal">
-          <form class="cform" id="contactForm" novalidate>
-            <div class="cform-row">
-              <div class="cform-group">
-                <label for="cname">Name</label>
-                <input type="text" id="cname" name="name" placeholder="Your name" required />
+          <div class="glass-card form-glass">
+            <form id="contactForm" novalidate>
+              <div class="fg-row">
+                <div class="fg">
+                  <label class="mono">NAME_</label>
+                  <input type="text" id="cname" name="name" placeholder="Your name" required/>
+                </div>
+                <div class="fg">
+                  <label class="mono">EMAIL_</label>
+                  <input type="email" id="cemail" name="email" placeholder="your@email.com" required/>
+                </div>
               </div>
-              <div class="cform-group">
-                <label for="cemail">Email</label>
-                <input type="email" id="cemail" name="email" placeholder="your@email.com" required />
+              <div class="fg">
+                <label class="mono">SUBJECT_</label>
+                <input type="text" id="csubject" name="subject" placeholder="Project inquiry"/>
               </div>
-            </div>
-            <div class="cform-group">
-              <label for="csubject">Subject</label>
-              <input type="text" id="csubject" name="subject" placeholder="Project inquiry" />
-            </div>
-            <div class="cform-group">
-              <label for="cmessage">Message</label>
-              <textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            <button type="submit" class="cform-btn">
-              Send Message <i class="fas fa-paper-plane"></i>
-            </button>
-            <div class="form-success" id="formSuccess">
-              <i class="fas fa-check-circle"></i> Message sent! I'll be in touch soon.
-            </div>
-          </form>
+              <div class="fg">
+                <label class="mono">MESSAGE_</label>
+                <textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                <span class="submit-bg"></span>
+                <span>TRANSMIT MESSAGE <i class="fas fa-paper-plane"></i></span>
+              </button>
+              <div class="form-ok" id="formSuccess">
+                <i class="fas fa-check-circle"></i> <span class="mono">TRANSMISSION SUCCESSFUL. WILL RESPOND SOON.</span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== FOOTER ====== -->
+  <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-row">
-        <div class="footer-brand">
-          <span class="bracket">[</span>AM<span class="bracket">]</span>
-          <span class="footer-name">Ajit Mane</span>
+        <div class="footer-brand mono">
+          <span class="accent-blue">&lt;</span>AM<span class="accent-blue">/&gt;</span>
+          <span class="footer-name">AJIT MANE</span>
         </div>
-        <p class="footer-copy">© 2024 Ajit Mane · Made with Ajit Mane in Mumbai</p>
+        <p class="footer-copy mono">© 2024 AJIT MANE · CRAFTED WITH <span style="color:#e05050">♥</span> IN MUMBAI</p>
         <a href="#home" class="top-btn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
       </div>
     </div>
