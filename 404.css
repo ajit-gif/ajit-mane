@@ -17,7 +17,7 @@ max-width: 500px;
 h1 {
 font-size: 100px;
 margin: 0;
-background: linear-gradient(45deg, #a8c347, #22c55e);
+background: linear-gradient(45deg, #1B91D6, #22c55e);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
