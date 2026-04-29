@@ -1253,3 +1253,10 @@ ul { list-style:none; }
   .cta-primary, .cta-ghost { text-align:center; justify-content:center; }
   .footer-row { flex-direction:column; text-align:center; }
 }
+.hero-name-wrap {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
