@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LLM developments a marketer or web dev should be tracking in 2026 | Ajit Mane</title>
+  <meta name="description" content="Reasoning models, agents and tool use, the Model Context Protocol, cheaper long context, small on-device models and multimodal retrieval — what each 2026 LLM shift means for websites, content workflows and analytics."/>
+  <link rel="canonical" href="https://ajitmane.com/blog/llm-trends-2026.html"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Ajit Mane"/>
+  <meta name="theme-color" content="#4f46e5"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Ajit Mane"/>
+  <meta property="og:title" content="LLM developments a marketer or web dev should be tracking in 2026"/>
+  <meta property="og:description" content="Reasoning models, agents, MCP, cheaper long context, small models and multimodal retrieval — and what each means for the web."/>
+  <meta property="og:url" content="https://ajitmane.com/blog/llm-trends-2026.html"/>
+  <meta property="og:image" content="https://ajitmane.com/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E"/>
+  <link rel="stylesheet" href="../blog.css"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "LLM developments a marketer or web dev should be tracking in 2026",
+    "description": "Reasoning models, agents and tool use, the Model Context Protocol, cheaper long context, small on-device models and multimodal retrieval, and what each means for the web.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "author": { "@type": "Person", "name": "Ajit Mane", "url": "https://ajitmane.com/" },
+    "publisher": { "@type": "Person", "name": "Ajit Mane" },
+    "mainEntityOfPage": "https://ajitmane.com/blog/llm-trends-2026.html"
+  }
+  </script>
+</head>
+<body>
+  <nav class="bnav">
+    <div class="bnav-inner">
+      <a href="/" class="logo"><span class="logo-mark">&lt;AM/&gt;</span><span>Ajit Mane</span></a>
+      <div class="bnav-links">
+        <a href="/blog/">Blog</a>
+        <a href="/#work">Work</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="container">
+      <header class="article-head">
+        <div class="post-meta"><span class="post-tag">LLMs</span><span>10 Sep 2026</span><span>9 min read</span></div>
+        <h1>LLM developments a marketer or web dev should be tracking in 2026</h1>
+        <p class="standfirst">You do not need to train models to be affected by them. Six shifts this year change how sites are built, how content is made, and how results are measured.</p>
+      </header>
+
+      <div class="article-body">
+        <p>The model race has moved past "which one writes the best paragraph". The developments that matter now are structural — how models reason, act, connect to tools, and run. Here is what is changing and why it lands on your desk even if you never touch an API.</p>
+
+        <h2>1. Reasoning models are the default for hard tasks</h2>
+        <p>Frontier models now spend variable "thinking" time before answering, and the gap between a quick reply and a deliberate one is large on anything multi-step: analysis, planning, debugging, structured extraction. For practitioners this means:</p>
+        <ul>
+          <li>Tasks you previously split into prompts — audit, then plan, then draft — can often be handed over whole.</li>
+          <li>Cost and latency now vary with effort, not just tokens, so batch the heavy reasoning and keep interactive paths light.</li>
+          <li>Output quality is far more sensitive to a clear problem statement and good context than to prompt trickery.</li>
+        </ul>
+
+        <h2>2. Agents and tool use move from demo to workflow</h2>
+        <p>Models that can call tools, browse, run code and chain steps are now reliable enough for bounded, repetitive work. Realistic 2026 uses in a marketing or web team:</p>
+        <ul>
+          <li>Technical SEO sweeps — crawl, diff against last week, open tickets for regressions.</li>
+          <li>Content refreshes — find pages with decaying rankings, propose and draft updates, leave them for review.</li>
+          <li>Reporting — pull from analytics and Search Console, assemble a narrative, flag anomalies.</li>
+        </ul>
+        <p>The pattern that works: narrow scope, read-only or reversible actions, a human approving anything that ships. Open-ended "do my marketing" still fails.</p>
+
+        <h2>3. The Model Context Protocol (MCP) standardized tool connections</h2>
+        <p>MCP is an open standard for connecting models to external tools and data through a common interface, rather than every integration being bespoke. It has had broad adoption across major AI clients. Why it matters to you:</p>
+        <ul>
+          <li>Your CMS, analytics, CRM and internal docs can be exposed to an assistant once, then used by any MCP-compatible client.</li>
+          <li>It lowers the cost of building internal AI workflows — you wire up a data source, not a whole app.</li>
+          <li>It has a security surface: an MCP server can expose more than you intend. Scope permissions tightly and treat tool output as untrusted input.</li>
+        </ul>
+
+        <h2>4. Long context got cheap enough to use casually</h2>
+        <p>Large context windows are no longer a premium party trick. Feeding a model an entire site, a quarter of analytics exports, or a full brand guide in one go is now routine and affordable. Practical consequences:</p>
+        <ul>
+          <li>Less need for elaborate retrieval pipelines on small and mid-size corpora — you can often just include everything.</li>
+          <li>Consistency work — tone, terminology, internal linking — gets easier when the model can hold the whole style guide and site map at once.</li>
+          <li>Prompt caching makes repeated large-context calls (same knowledge base, new question) meaningfully cheaper; structure prompts so the stable part comes first.</li>
+        </ul>
+
+        <h2>5. Small and on-device models are good enough for a lot</h2>
+        <p>Compact models — some running locally in the browser or on a phone — now handle classification, extraction, summarization, routing and drafting at a quality that was frontier-only a couple of years ago. For the web that opens up:</p>
+        <ul>
+          <li>Privacy-preserving features that never send user data to a server.</li>
+          <li>Cheap, high-volume tasks — tagging, moderation, personalization — without per-call API cost.</li>
+          <li>A tiering strategy: small model for the common case, escalate to a frontier model only when confidence is low.</li>
+        </ul>
+
+        <h2>6. Multimodal retrieval changes what "content" means</h2>
+        <p>Models read images, video, audio and documents natively, and answer engines increasingly retrieve across all of them. That means:</p>
+        <ul>
+          <li>Diagrams, charts and screenshots need real alt text, captions and surrounding explanation — they are now indexable content, not decoration.</li>
+          <li>Video and podcast transcripts are retrievable source material; publish them.</li>
+          <li>PDFs and spec sheets get parsed directly, so the data inside them can be cited even if it never made it onto an HTML page.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>The through-line</strong>
+          Every one of these shifts rewards the same thing: clean, well-structured, machine-readable information and tightly scoped automation with a human in the loop. That is a content and architecture problem, not an AI problem.
+        </div>
+
+        <h2>What to actually do this quarter</h2>
+        <ol>
+          <li>Pick one repetitive workflow and prototype an agent for it with reversible actions only.</li>
+          <li>Audit your media for alt text, captions and transcripts — treat them as first-class content.</li>
+          <li>If you run internal tools, evaluate exposing one via MCP, with scoped read access.</li>
+          <li>Move a high-volume, low-stakes task (tagging, routing, first-draft replies) to a small model and measure the cost delta.</li>
+          <li>Re-check your AI-crawler and analytics setup so you can see model-driven traffic clearly.</li>
+        </ol>
+
+        <p>None of this requires betting on a particular lab or model. It requires making your site and your data easy for any capable model to use — which, conveniently, is the same work that AEO and GEO ask for.</p>
+      </div>
+
+      <footer class="article-foot">
+        <span class="byline">Written by Ajit Mane · Digital Marketing &amp; Web Development, Mumbai</span>
+        <a class="btn" href="/blog/">← All articles</a>
+      </footer>
+    </div>
+  </article>
+
+  <footer class="bfooter">
+    <div class="bfooter-inner">
+      <span>© 2026 Ajit Mane · Mumbai</span>
+      <span><a href="/">ajitmane.com</a></span>
+    </div>
+  </footer>
+</body>
+</html>

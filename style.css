@@ -448,9 +448,12 @@ svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8;
 
 /* ── Blog ──────────────────────────────────────────────── */
 .blog-card {
+  display:block;
   background:var(--bg-card); border:1px solid var(--line);
   border-radius:var(--r); padding:26px 24px; transition:var(--tr);
 }
+a.blog-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:var(--accent); }
+a.blog-card:hover h3 { color:var(--accent); }
 .blog-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:var(--line-2); }
 .blog-tag { display:inline-block; font-size:.68rem; font-weight:700; letter-spacing:.14em; color:var(--teal); margin-bottom:14px; }
 .blog-card h3 { font-family:var(--ff-d); font-size:1.08rem; line-height:1.35; margin-bottom:10px; }

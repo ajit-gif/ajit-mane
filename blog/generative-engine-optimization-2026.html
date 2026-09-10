@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generative Engine Optimization: getting your brand cited inside ChatGPT, Gemini &amp; Perplexity | Ajit Mane</title>
+  <meta name="description" content="A practical 2026 GEO guide: the content signals that get brands cited by generative engines, the emerging llms.txt convention, off-site mentions, and how AI-visibility tracking works."/>
+  <link rel="canonical" href="https://ajitmane.com/blog/generative-engine-optimization-2026.html"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Ajit Mane"/>
+  <meta name="theme-color" content="#4f46e5"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Ajit Mane"/>
+  <meta property="og:title" content="Generative Engine Optimization: getting your brand cited inside ChatGPT, Gemini & Perplexity"/>
+  <meta property="og:description" content="The content and off-site signals that get brands surfaced and cited by generative engines in 2026 — plus how to track AI visibility."/>
+  <meta property="og:url" content="https://ajitmane.com/blog/generative-engine-optimization-2026.html"/>
+  <meta property="og:image" content="https://ajitmane.com/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E"/>
+  <link rel="stylesheet" href="../blog.css"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Generative Engine Optimization: getting your brand cited inside ChatGPT, Gemini & Perplexity",
+    "description": "The content and off-site signals that get brands surfaced and cited by generative engines in 2026, plus how AI-visibility tracking works.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10",
+    "author": { "@type": "Person", "name": "Ajit Mane", "url": "https://ajitmane.com/" },
+    "publisher": { "@type": "Person", "name": "Ajit Mane" },
+    "mainEntityOfPage": "https://ajitmane.com/blog/generative-engine-optimization-2026.html"
+  }
+  </script>
+</head>
+<body>
+  <nav class="bnav">
+    <div class="bnav-inner">
+      <a href="/" class="logo"><span class="logo-mark">&lt;AM/&gt;</span><span>Ajit Mane</span></a>
+      <div class="bnav-links">
+        <a href="/blog/">Blog</a>
+        <a href="/#work">Work</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="container">
+      <header class="article-head">
+        <div class="post-meta"><span class="post-tag">GEO</span><span>10 Sep 2026</span><span>8 min read</span></div>
+        <h1>Generative Engine Optimization: getting your brand cited inside ChatGPT, Gemini &amp; Perplexity</h1>
+        <p class="standfirst">GEO is the discipline of being the thing an AI recommends. It overlaps with SEO, but the winning tactics — and the way you measure them — are different.</p>
+      </header>
+
+      <div class="article-body">
+        <p><strong>Generative Engine Optimization (GEO)</strong> is optimizing your presence so that generative engines — ChatGPT, Gemini, Perplexity, Copilot, Claude, and AI Overviews — mention, recommend and cite you when they answer a relevant prompt. Where AEO focuses on winning the answer box on a search results page, GEO is broader: it is about how your brand is represented inside the model's response, wherever that response appears.</p>
+        <p>The distinction matters because a growing share of buying research now happens entirely inside a chat window. If a prospect asks "what are the best options for X in India?" and your brand is not in the list, you were never in the consideration set.</p>
+
+        <h2>How generative engines pick what to cite</h2>
+        <p>Two mechanisms are doing the work:</p>
+        <ol>
+          <li><strong>Retrieval at answer time.</strong> The engine runs a live search, pulls a handful of pages, and grounds its answer in them. This is where fresh, well-structured, crawlable content wins — the same content that helps with AEO.</li>
+          <li><strong>What the model already "knows".</strong> Brands that are described consistently across the wider web — news, forums, review sites, documentation, community threads — are more likely to be produced from the model's own weights, without any retrieval at all.</li>
+        </ol>
+        <p>Good GEO works both levers: sharpen the pages that get retrieved, and build the off-site footprint that shapes the model's baseline.</p>
+
+        <h2>On-page signals that increase citation rate</h2>
+        <p>Research into generative engines, and a lot of practitioner testing since, points to a consistent set of content moves that raise how often a page gets cited:</p>
+        <ul>
+          <li><strong>Lead with quotable statistics.</strong> A concrete, sourced number is the single most "liftable" unit of content. Pages that state specific figures get pulled into answers more than pages that generalize.</li>
+          <li><strong>Add citations and outbound references.</strong> Content that cites credible sources reads as more authoritative to the engine and is quoted more often.</li>
+          <li><strong>Include direct quotes.</strong> A named expert saying something in quotation marks gives the engine a clean, attributable snippet.</li>
+          <li><strong>Write with clear authority and precision.</strong> Hedged, fluffy copy summarizes into nothing. Confident, specific sentences survive.</li>
+          <li><strong>Structure ruthlessly.</strong> Descriptive headings, short paragraphs, tables, and step lists. Put the answer to each sub-question directly under its heading.</li>
+          <li><strong>Keep it current.</strong> Visible dates and real updates. Generative engines strongly prefer recent sources for anything time-sensitive.</li>
+        </ul>
+
+        <h2>The <code>llms.txt</code> convention</h2>
+        <p>A lightweight standard has emerged: a plain-text <code>/llms.txt</code> file at your site root that gives models a curated, Markdown-linked map of your most important pages — think of it as a <code>robots.txt</code> for meaning rather than permission. Adoption is still uneven and not every engine consumes it, but it is cheap to add and useful as a canonical index of what you want represented. Pair it with clean, individually crawlable pages; <code>llms.txt</code> is a pointer, not a substitute for good content.</p>
+        <p>Separately, check your <code>robots.txt</code> and CDN rules: if you are blocking AI crawlers like <code>GPTBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code> or <code>ClaudeBot</code>, you are opting out of retrieval-time citation. That is a strategic choice — make it deliberately, not by accident.</p>
+
+        <h2>Off-site: the footprint that shapes the model</h2>
+        <ul>
+          <li><strong>Earned mentions on trusted sites.</strong> Press, industry publications, and partner sites. Consistent descriptions of who you are and what you do.</li>
+          <li><strong>Community presence.</strong> Reddit, Quora, Stack Overflow, niche forums and Discord-adjacent public content are heavily represented in training and retrieval. Genuine, helpful participation compounds.</li>
+          <li><strong>Review and comparison platforms.</strong> G2, Capterra, Trustpilot, and category-specific aggregators are frequent sources for "best of" answers.</li>
+          <li><strong>Structured reference data.</strong> Wikidata, LinkedIn, Crunchbase and well-maintained directory listings feed entity understanding.</li>
+          <li><strong>Consistency above all.</strong> The same positioning, categories and facts everywhere. Contradictions dilute what the model will confidently say.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>GEO ≠ link building with a new name</strong>
+          The goal is not anchor text or PageRank. It is that a model, asked about your category, describes your brand accurately and includes you in shortlists. That is won with clear positioning repeated across credible surfaces.
+        </div>
+
+        <h2>Tracking AI visibility</h2>
+        <p>You cannot manage what you cannot see. A basic GEO measurement stack:</p>
+        <ul>
+          <li><strong>Prompt panels.</strong> Maintain a set of 25&ndash;50 prompts a real buyer would ask. Run them monthly across the major engines and record: are you mentioned, are you cited with a link, what is the sentiment, who is mentioned instead.</li>
+          <li><strong>Share of voice.</strong> Track the percentage of category prompts where your brand appears versus named competitors.</li>
+          <li><strong>Source attribution.</strong> When you are cited, note which page or third-party source the engine used — that tells you where to invest.</li>
+          <li><strong>AI-visibility tools.</strong> A category of dedicated trackers (Profound, Peec AI, Otterly, and others) now automates this monitoring; useful once manual tracking gets unwieldy.</li>
+          <li><strong>Traffic and conversions from AI referrers.</strong> Segment ChatGPT, Perplexity, Gemini and Copilot referrals in analytics and watch lead quality, not just clicks.</li>
+        </ul>
+
+        <h2>A 30-day GEO starting plan</h2>
+        <ol>
+          <li>Build your prompt panel and run a baseline across four engines.</li>
+          <li>Audit <code>robots.txt</code> / CDN for accidental AI-crawler blocks; publish an <code>llms.txt</code>.</li>
+          <li>Rework your five highest-value pages: statistic up top, citations added, headings as questions, dates visible.</li>
+          <li>Fix entity consistency across LinkedIn, Google Business Profile, Crunchbase and Wikidata.</li>
+          <li>Pick two communities where your buyers actually are and commit to helpful monthly participation.</li>
+          <li>Re-run the prompt panel at day 30 and compare share of voice.</li>
+        </ol>
+
+        <p>GEO is early enough that consistent, honest effort still buys outsized visibility. The brands that win are not gaming a model — they are the ones a model can describe clearly because the whole web already describes them the same way.</p>
+      </div>
+
+      <footer class="article-foot">
+        <span class="byline">Written by Ajit Mane · Digital Marketing &amp; Web Development, Mumbai</span>
+        <a class="btn" href="/blog/">← All articles</a>
+      </footer>
+    </div>
+  </article>
+
+  <footer class="bfooter">
+    <div class="bfooter-inner">
+      <span>© 2026 Ajit Mane · Mumbai</span>
+      <span><a href="/">ajitmane.com</a></span>
+    </div>
+  </footer>
+</body>
+</html>
