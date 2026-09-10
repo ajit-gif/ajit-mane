@@ -1,202 +1,165 @@
 /**
- * AJIT MANE PORTFOLIO v3 — script.js
- * Cyber Neon Aesthetic
+ * AJIT MANE PORTFOLIO v4 — script.js
+ * Modern marketing studio rebuild.
  */
 
-/* ── Grain canvas ────────────────────────────────────────── */
-(function generateGrain() {
-  const canvas = document.getElementById('grainCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
+/* ── Form backend (optional) ──────────────────────────────
+   Create a free form at https://formspree.io (or use EmailJS),
+   then paste your ID below, e.g. "https://formspree.io/f/abcdwxyz".
+   If left empty, the form falls back to composing an email
+   via the visitor's mail app — so no inquiry is ever lost.
+*/
+const FORM_ENDPOINT = "";
 
-  function resize() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  function drawGrain() {
-    const w = canvas.width, h = canvas.height;
-    const imageData = ctx.createImageData(w, h);
-    const data = imageData.data;
-    for (let i = 0; i < data.length; i += 4) {
-      const val = Math.random() * 255;
-      data[i] = data[i+1] = data[i+2] = val;
-      data[i+3] = 20; // very faint
-    }
-    ctx.putImageData(imageData, 0, 0);
-  }
-
-  // Redraw grain at low fps for performance
-  let last = 0;
-  function loop(ts) {
-    if (ts - last > 80) { drawGrain(); last = ts; }
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
-})();
-
-/* ── Navbar scroll ───────────────────────────────────────── */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
+/* ── Navbar scroll state ───────────────────────────────── */
+const nav = document.getElementById("nav");
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 16);
 }, { passive: true });
 
-/* ── Mobile menu ─────────────────────────────────────────── */
-const burger    = document.getElementById('burger');
-const navLinks  = document.getElementById('navLinks');
-const navCenter = document.querySelector('.nav-center');
+/* ── Mobile menu ───────────────────────────────────────── */
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  navLinks.classList.toggle('open');
-  if (navCenter) navCenter.classList.toggle('mobile-open');
+burger.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  burger.classList.toggle("open", open);
+  burger.setAttribute("aria-expanded", open);
 });
 
-document.querySelectorAll('.nl').forEach(link => {
-  link.addEventListener('click', () => {
-    burger.classList.remove('open');
-    navLinks.classList.remove('open');
-    if (navCenter) navCenter.classList.remove('mobile-open');
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    burger.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
   });
 });
 
-document.addEventListener('click', e => {
-  if (!navbar.contains(e.target)) {
-    burger.classList.remove('open');
-    navLinks.classList.remove('open');
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && navLinks.classList.contains("open")) {
+    navLinks.classList.remove("open");
+    burger.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
   }
 });
 
-/* ── Active nav ──────────────────────────────────────────── */
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nl');
+/* ── Active nav link on scroll ─────────────────────────── */
+const sections = document.querySelectorAll("section[id]");
+const navItems = document.querySelectorAll(".nav-link");
 
 function updateActiveNav() {
-  const y = window.scrollY + 90;
-  sections.forEach(sec => {
-    if (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) {
-      navItems.forEach(n => n.classList.remove('active'));
-      const a = document.querySelector(`.nl[href="#${sec.id}"]`);
-      if (a) a.classList.add('active');
-    }
+  const y = window.scrollY + 120;
+  let current = null;
+  sections.forEach((sec) => {
+    if (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) current = sec.id;
+  });
+  navItems.forEach((n) => {
+    n.classList.toggle("active", n.getAttribute("href") === "#" + current);
   });
 }
-window.addEventListener('scroll', updateActiveNav, { passive:true });
+window.addEventListener("scroll", updateActiveNav, { passive: true });
 updateActiveNav();
 
-/* ── Scroll reveal ───────────────────────────────────────── */
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (!entry.isIntersecting) return;
-    const siblings = Array.from(entry.target.parentElement?.querySelectorAll('.reveal') || []);
-    const idx = siblings.indexOf(entry.target);
-    setTimeout(() => entry.target.classList.add('visible'), Math.min(idx * 120, 480));
-    revealObs.unobserve(entry.target);
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+/* ── Scroll reveal (respects reduced motion) ───────────── */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-/* ── Smooth scroll ───────────────────────────────────────── */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 76, behavior: 'smooth' });
-    }
-  });
-});
-
-/* ── Contact form ────────────────────────────────────────── */
-const form    = document.getElementById('contactForm');
-const formOk  = document.getElementById('formSuccess');
-
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const name  = form.querySelector('#cname').value.trim();
-    const email = form.querySelector('#cemail').value.trim();
-    const msg   = form.querySelector('#cmessage').value.trim();
-
-    if (!name || !email || !msg) { alert('Please fill in Name, Email and Message.'); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Invalid email address.'); return; }
-
-    const btn = form.querySelector('.form-submit');
-    btn.disabled = true;
-    btn.querySelector('span:last-child').innerHTML = '<i class="fas fa-spinner fa-spin"></i> TRANSMITTING...';
-
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.querySelector('span:last-child').innerHTML = 'TRANSMIT MESSAGE <i class="fas fa-paper-plane"></i>';
-      formOk.classList.add('show');
-      form.reset();
-      setTimeout(() => formOk.classList.remove('show'), 5500);
-    }, 1400);
-  });
+if (reduceMotion) {
+  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+} else {
+  const revealObs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -48px 0px" }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
 }
 
-/* ── Service card tilt ───────────────────────────────────── */
-document.querySelectorAll('.svc-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r  = card.getBoundingClientRect();
-    const dx = (e.clientX - r.left - r.width  / 2) / (r.width  / 2);
-    const dy = (e.clientY - r.top  - r.height / 2) / (r.height / 2);
-    card.style.transform    = `translateY(-6px) rotateX(${dy * -5}deg) rotateY(${dx * 5}deg)`;
-    card.style.transition   = 'transform .08s ease';
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform  = '';
-    card.style.transition = 'all .3s cubic-bezier(.4,0,.2,1)';
-  });
-});
+/* ── Contact form ──────────────────────────────────────── */
+const form = document.getElementById("contactForm");
+const formBtn = document.getElementById("formBtn");
+const formStatus = document.getElementById("formStatus");
 
-/* ── Glitch flash on hero name (subtle) ─────────────────── */
-(function heroGlitch() {
-  const first = document.querySelector('.hero-firstname');
-  const last  = document.querySelector('.hero-lastname span');
-  if (!first || !last) return;
-
-  function flash(el) {
-    el.style.textShadow = '2px 0 var(--green), -2px 0 var(--blue)';
-    el.style.transform  = 'skewX(-2deg)';
-    setTimeout(() => {
-      el.style.textShadow = '';
-      el.style.transform  = '';
-    }, 80);
+function setError(id, msg) {
+  const field = document.getElementById(id);
+  const err = document.getElementById("err-" + id);
+  field.classList.toggle("invalid", !!msg);
+  if (err) {
+    err.textContent = msg;
+    err.classList.toggle("show", !!msg);
   }
-
-  setInterval(() => {
-    if (Math.random() < .3) flash(Math.random() < .5 ? first : last);
-  }, 3500);
-})();
-
-/* ── Edu progress bars ───────────────────────────────────── */
-const eduObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      eduObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.4 });
-
-document.querySelectorAll('.edu-card').forEach(c => eduObs.observe(c));
-
-/* ── Ticker mouse pause ──────────────────────────────────── */
-const ticker = document.querySelector('.ticker-inner');
-if (ticker) {
-  ticker.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
-  ticker.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
 }
 
-/* ── rAF scroll batch ────────────────────────────────────── */
-let ticking = false;
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(() => { updateActiveNav(); ticking = false; });
-    ticking = true;
+function validate() {
+  let ok = true;
+  const name = document.getElementById("cname").value.trim();
+  const email = document.getElementById("cemail").value.trim();
+  const msg = document.getElementById("cmessage").value.trim();
+
+  setError("cname", name ? "" : "Please tell me your name.");
+  setError("cemail", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "" : "Please enter a valid email.");
+  setError("cmessage", msg ? "" : "Please add a short message.");
+  if (!name || !email || !msg || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) ok = false;
+  return ok;
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!validate()) return;
+
+  const name = document.getElementById("cname").value.trim();
+  const email = document.getElementById("cemail").value.trim();
+  const subject = document.getElementById("csubject").value.trim() || "Project inquiry";
+  const message = document.getElementById("cmessage").value.trim();
+
+  formStatus.className = "form-status";
+  formStatus.textContent = "";
+  formBtn.disabled = true;
+
+  if (FORM_ENDPOINT) {
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      if (res.ok) {
+        formStatus.classList.add("ok");
+        formStatus.textContent = "Message sent — I'll get back to you soon.";
+        form.reset();
+      } else {
+        formStatus.classList.add("err");
+        formStatus.textContent = "Something went wrong. Please email me directly at ajitm272@gmail.com.";
+      }
+    } catch (err) {
+      formStatus.classList.add("err");
+      formStatus.textContent = "Network error. Your email app is opening instead…";
+      openMailto(name, email, subject, message);
+    }
+  } else {
+    /* Fallback: compose in the visitor's mail app */
+    openMailto(name, email, subject, message);
+    formStatus.classList.add("ok");
+    formStatus.textContent = "Opening your email app — just hit send. (Or email me directly: ajitm272@gmail.com)";
   }
-}, { passive: true });
+
+  formBtn.disabled = false;
+});
+
+function openMailto(name, email, subject, message) {
+  const body =
+    "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+  window.location.href =
+    "mailto:ajitm272@gmail.com?subject=" +
+    encodeURIComponent(subject) +
+    "&body=" +
+    encodeURIComponent(body);
+}
+
+/* ── Dynamic footer year ───────────────────────────────── */
+document.getElementById("year").textContent = new Date().getFullYear();

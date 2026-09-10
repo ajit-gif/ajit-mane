@@ -3,23 +3,43 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AJIT MANE — Digital Marketing & Web Development</title>
-  <meta name="description" content="Ajit Mane is a Digital Marketing Executive and Web Developer in Mumbai with 2+ years of experience in SEO, performance marketing, and website optimization."/>
-  <!-- CANONICAL -->
-  <link rel="canonical" href="https://ajitmane.com/" />
-  <!-- ROBOTS -->
-<meta name="robots" content="index, follow">
+  <title>Ajit Mane — Digital Marketing & Web Development, Mumbai</title>
+  <meta name="description" content="Ajit Mane is a digital marketing executive and web developer in Mumbai with 2+ years of experience in SEO, performance marketing, website development, and AI-powered content workflows."/>
 
-<!-- AUTHOR / PUBLISHER -->
-<meta name="author" content="Ajit Mane">
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://ajitmane.com/"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Ajit Mane"/>
+  <meta name="theme-color" content="#4f46e5"/>
 
-<!-- (OPTIONAL) KEYWORDS -->
-<meta name="keywords" content="Ajit Mane, Digital Marketing, SEO, Web Developer, Mumbai">
-  <!-- BING VERIFICATION -->
-  <meta name="msvalidate.01" content="66AB9ADD426C1DD4D19467D6CF2E0E7F" />
-   <!-- Google Analytics -->
+  <!-- Social sharing (Open Graph + Twitter) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Ajit Mane"/>
+  <meta property="og:title" content="Ajit Mane — Digital Marketing & Web Development, Mumbai"/>
+  <meta property="og:description" content="SEO, performance marketing, website development and AI-powered content workflows. Helping brands get found, clicked, and converted."/>
+  <meta property="og:url" content="https://ajitmane.com/"/>
+  <meta property="og:image" content="https://ajitmane.com/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Ajit Mane — Digital Marketing & Web Development"/>
+  <meta name="twitter:description" content="SEO, performance marketing, website development and AI-powered content workflows from Mumbai."/>
+  <meta name="twitter:image" content="https://ajitmane.com/og-image.png"/>
+
+  <!-- Bing verification (kept from previous site) -->
+  <meta name="msvalidate.01" content="66AB9ADD426C1DD4D19467D6CF2E0E7F"/>
+
+  <!-- Favicon (inline SVG — no extra request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E"/>
+
+  <!-- Google Analytics (kept from previous site) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-814023CNCP"></script>
-   <!-- Microsoft Clarity -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-814023CNCP');
+  </script>
+
+  <!-- Microsoft Clarity (kept from previous site) -->
   <script>
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -27,571 +47,619 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wjno57x5pq");
   </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-814023CNCP');
+
+  <!-- Structured data: Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ajit Mane",
+    "url": "https://ajitmane.com/",
+    "image": "https://ajitmane.com/og-image.png",
+    "jobTitle": "Digital Marketing Executive & Web Developer",
+    "description": "Digital marketing executive and web developer in Mumbai specialising in SEO, performance marketing, website development, and AI-powered content workflows.",
+    "email": "mailto:ajitm272@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/mane-ajit/",
+      "https://t.me/Mane_Ajit"
+    ]
+  }
   </script>
-  <link rel="icon" href="favicon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- Scan line overlay -->
-  <div class="scanlines" aria-hidden="true"></div>
-  <!-- Noise grain -->
-  <canvas class="grain" id="grainCanvas" aria-hidden="true"></canvas>
-
-  <!-- ═══ NAVBAR ═══ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-wrap">
-      <a href="#home" class="nav-logo">
-        <span class="logo-tag">&lt;</span>AM<span class="logo-tag">/&gt;</span>
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="nav" id="nav">
+    <nav class="nav-inner container" aria-label="Main navigation">
+      <a href="#top" class="logo">
+        <span class="logo-mark" aria-hidden="true">&lt;AM/&gt;</span>
+        <span class="logo-text">Ajit Mane</span>
       </a>
-      <div class="nav-center">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home"       class="nl active">HOME</a></li>
-          <li><a href="#about"      class="nl">ABOUT</a></li>
-          <li><a href="#skills"     class="nl">SKILLS</a></li>
-          <li><a href="#experience" class="nl">EXP</a></li>
-          <li><a href="#education"  class="nl">EDU</a></li>
-          <li><a href="#tools"      class="nl">TOOLS</a></li>
-          <li><a href="/blog/" class="nl">BLOG</a></li>
-          <li><a href="#contact"    class="nl">CONTACT</a></li>
-        </ul>
-      </div>
-<a href="https://www.linkedin.com/in/mane-ajit/" target="_blank"
-class="nav-cta"
-onclick="gtag('event', 'linkedin_click', {
-  'event_category': 'social',
-  'event_label': 'Hire Me LinkedIn'
-});">
-  HIRE ME <i class="fab fa-linkedin"></i>
-</a>
-      <button class="burger" id="burger" aria-label="Menu">
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link nav-link-cta">Hire me</a></li>
+      </ul>
+
+      <a href="https://www.linkedin.com/in/mane-ajit/" target="_blank" rel="noopener" class="btn btn-primary btn-nav" onclick="gtag('event','linkedin_click',{'event_category':'social','event_label':'nav_hire_me'});">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        Hire me
+      </a>
+
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- ═══ HERO ═══ -->
-  <section class="hero" id="home">
-    <!-- Animated grid -->
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <!-- Glowing orbs -->
-    <div class="orb orb-1" aria-hidden="true"></div>
-    <div class="orb orb-2" aria-hidden="true"></div>
-    <div class="orb orb-3" aria-hidden="true"></div>
+  <main id="top">
 
-    <div class="hero-content">
-      <!-- Status bar -->
-      <div class="status-bar">
-        <span class="status-ping"></span>
-        <span class="mono">STATUS: AVAILABLE FOR FREELANCE</span>
-        <span class="status-sep">///</span>
-        <span class="mono">LOC: MUMBAI.IN</span>
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="grid"></div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
       </div>
 
-      <!-- Giant name -->
-<h1 class="hero-name-wrap">
-  <div class="hero-name-block">
-    <div class="hero-firstname">AJIT</div>
-    <div class="hero-lastname">
-      <span>MANE</span>
-      <div class="hero-line-deco"></div>
-    </div>
-  </div>
-</h1>
+      <div class="hero-inner container">
+        <p class="pill reveal">
+          <span class="dot" aria-hidden="true"></span>
+          Available for freelance projects
+          <span class="pill-sep" aria-hidden="true"></span>
+          <span class="pill-mono">LOC: MUMBAI.IN</span>
+        </p>
 
-      <!-- Role tags -->
-      <div class="hero-roles">
-        <span class="role-chip chip-blue"><i class="fas fa-chart-line"></i> DIGITAL MARKETING</span>
-        <span class="role-chip chip-green"><i class="fas fa-code"></i> WEB DEVELOPER</span>
-        <span class="role-chip chip-dim"><i class="fas fa-robot"></i> AI TOOLS EXPERT</span>
-      </div>
+        <h1 class="hero-title reveal">
+          I help businesses <span class="grad">get found, clicked &amp; converted</span> online.
+        </h1>
 
-      <!-- Tagline -->
-      <p class="hero-tagline">
-        Results-driven professional with <span class="accent-blue">2+ years</span> of experience
-        in SEO, social media marketing, and performance campaigns. Specializing in
-        <span class="accent-green">data-driven growth</span>.
-      </p>
+        <p class="hero-sub reveal">
+          I'm <strong>Ajit Mane</strong> — a digital marketing executive &amp; web developer in Mumbai.
+          I blend <strong>SEO</strong>, <strong>performance marketing</strong> and <strong>AI-powered workflows</strong>
+          to grow brands that are easy to find and impossible to ignore.
+        </p>
 
-      <!-- CTAs -->
-      <div class="hero-ctas">
-        <a href="#skills" class="cta-primary">
-          <span class="cta-bg"></span>
-          <span class="cta-text">EXPLORE WORK <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="#contact" class="cta-ghost">
-          GET IN TOUCH <i class="fas fa-paper-plane"></i>
-        </a>
-      </div>
-
-      <!-- Stats row -->
-      <div class="hero-stats">
-        <div class="hstat">
-          <div class="hstat-n">02<span class="hstat-plus">+</span></div>
-          <div class="hstat-l">YEARS<br>EXP</div>
-        </div>
-        <div class="hstat-divider"></div>
-        <div class="hstat">
-          <div class="hstat-n">18<span class="hstat-plus">+</span></div>
-          <div class="hstat-l">TOOLS<br>MASTERED</div>
-        </div>
-        <div class="hstat-divider"></div>
-        <div class="hstat">
-          <div class="hstat-n">03</div>
-          <div class="hstat-l">CORE<br>SKILLS</div>
-        </div>
-        <div class="hstat-divider"></div>
-        <div class="hstat">
-          <div class="hstat-n">100<span class="hstat-plus">%</span></div>
-          <div class="hstat-l">CLIENT<br>FOCUS</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Side decoration -->
-    <div class="hero-side-deco" aria-hidden="true">
-      <div class="side-label">SCROLL DOWN</div>
-      <div class="side-line"></div>
-    </div>
-
-    <!-- Scrolling bottom ticker -->
-    <div class="ticker-outer">
-      <div class="ticker-inner">
-        <span>SEO OPTIMIZATION</span><b>▸</b>
-        <span>WEB DEVELOPMENT</span><b>▸</b>
-        <span>CONTENT CREATION</span><b>▸</b>
-        <span>GOOGLE ANALYTICS</span><b>▸</b>
-        <span>PERFORMANCE MARKETING</span><b>▸</b>
-        <span>AI-POWERED WORKFLOWS</span><b>▸</b>
-        <span>WORDPRESS & WIX</span><b>▸</b>
-        <span>SEO OPTIMIZATION</span><b>▸</b>
-        <span>WEB DEVELOPMENT</span><b>▸</b>
-        <span>CONTENT CREATION</span><b>▸</b>
-        <span>GOOGLE ANALYTICS</span><b>▸</b>
-        <span>PERFORMANCE MARKETING</span><b>▸</b>
-        <span>AI-POWERED WORKFLOWS</span><b>▸</b>
-        <span>WORDPRESS & WIX</span><b>▸</b>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ ABOUT ═══ -->
-  <section class="section about-sec" id="about">
-    <div class="container">
-      <div class="sec-eyebrow">
-        <span class="mono accent-blue">// 01</span>
-        <span class="eyebrow-line"></span>
-        <span class="mono">ABOUT_ME.exe</span>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-left reveal">
-          <h2 class="sec-title">THE PERSON<br><em>BEHIND THE</em><br>SCREEN</h2>
-
-          <div class="glass-card quote-card">
-            <div class="quote-glyph">"</div>
-            <p>Do what you love and you'll never have a problem with Mondays.</p>
-          </div>
-
-          <div class="info-chips">
-            <div class="info-chip">
-              <i class="fas fa-map-marker-alt" style="color:var(--blue)"></i>
-              <span>Mumbai, India</span>
-            </div>
-            <div class="info-chip">
-              <i class="fas fa-briefcase" style="color:var(--green)"></i>
-              <span>Freelancer</span>
-            </div>
-            <div class="info-chip">
-              <i class="fas fa-circle" style="color:var(--green);font-size:.5rem"></i>
-              <span>Available Now</span>
-            </div>
-          </div>
+        <div class="hero-ctas reveal">
+          <a href="#work" class="btn btn-primary">
+            View my work
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            Get in touch
+          </a>
         </div>
 
-        <div class="about-right reveal">
-          <div class="av-block">
-            <div class="av-hex">
-              <div class="av-inner">AM</div>
-            </div>
-            <div class="av-rings">
-              <div class="av-ring r1"></div>
-              <div class="av-ring r2"></div>
+        <dl class="hero-stats reveal" aria-label="Highlights">
+          <div class="stat"><dt>2+</dt><dd>Years hands-on experience</dd></div>
+          <div class="stat"><dt>18+</dt><dd>Tools in my toolkit</dd></div>
+          <div class="stat"><dt>3</dt><dd>Core service areas</dd></div>
+          <div class="stat"><dt>∞</dt><dd>Curiosity &amp; learning</dd></div>
+        </dl>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>SEO Optimization</span><i>✦</i>
+          <span>Performance Marketing</span><i>✦</i>
+          <span>WordPress &amp; Wix</span><i>✦</i>
+          <span>Google Analytics 4</span><i>✦</i>
+          <span>Content Strategy</span><i>✦</i>
+          <span>AI-Powered Workflows</span><i>✦</i>
+          <span>Technical SEO</span><i>✦</i>
+          <span>SEO Optimization</span><i>✦</i>
+          <span>Performance Marketing</span><i>✦</i>
+          <span>WordPress &amp; Wix</span><i>✦</i>
+          <span>Google Analytics 4</span><i>✦</i>
+          <span>Content Strategy</span><i>✦</i>
+          <span>AI-Powered Workflows</span><i>✦</i>
+          <span>Technical SEO</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow reveal"><span>01</span> About</p>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <h2 class="section-title">The person behind the screen</h2>
+            <p>
+              I'm a <strong>Digital Marketing Executive and Web Developer</strong> working as a freelancer
+              from Mumbai. I enjoy solving real-world problems with digital solutions — and I treat
+              every project as a chance to learn something new.
+            </p>
+            <p>
+              With over <strong>2 years of experience</strong>, I've worked across SEO, website
+              development and content strategy. I actively use <strong>AI tools</strong> to move faster,
+              automate the boring parts, and keep up with how digital marketing changes every few months.
+            </p>
+
+            <div class="focus-list" aria-label="What I focus on">
+              <div class="focus-item">
+                <span class="focus-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-7"/></svg>
+                </span>
+                <div><strong>SEO-first thinking</strong><span>Rankings that survive algorithm updates.</span></div>
+              </div>
+              <div class="focus-item">
+                <span class="focus-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg>
+                </span>
+                <div><strong>Building with AI workflows</strong><span>Faster delivery, higher consistency.</span></div>
+              </div>
+              <div class="focus-item">
+                <span class="focus-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+                </span>
+                <div><strong>Data-driven decisions</strong><span>GA4, Search Console, real numbers.</span></div>
+              </div>
             </div>
           </div>
 
-          <p class="about-text">I am a passionate <mark class="mk-blue">Digital Marketing Executive and Web Developer</mark> working as a freelancer. I enjoy solving real-world problems using digital solutions and continuous learning.</p>
-          <p class="about-text">With over <mark class="mk-green">2 years of experience</mark>, I have worked on SEO, website development, and content strategies. I actively use <mark class="mk-blue">AI tools</mark> to improve productivity and stay updated with modern digital trends.</p>
-
-          <div class="skill-tag-grid">
-            <div class="stag-label"><span class="mono accent-blue">SKILLS[]</span></div>
-            <div class="stag-wrap">
-              <span class="stag"><i class="fas fa-search"></i> SEO Optimization</span>
-              <span class="stag"><i class="fas fa-pen-nib"></i> Content Marketing</span>
-              <span class="stag"><i class="fas fa-cloud"></i> DevOps &amp; AWS</span>
-              <span class="stag"><i class="fas fa-users"></i> Teamwork</span>
-              <span class="stag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ SKILLS ═══ -->
-  <section class="section skills-sec" id="skills">
-    <div class="container">
-      <div class="sec-eyebrow">
-        <span class="mono accent-green">// 02</span>
-        <span class="eyebrow-line"></span>
-        <span class="mono">SKILLS_SERVICES.json</span>
-      </div>
-      <h2 class="sec-title reveal">WHAT I <em>BRING</em><br>TO THE TABLE</h2>
-
-      <div class="services-grid">
-
-        <div class="svc-card svc-blue reveal">
-          <div class="svc-glow"></div>
-          <div class="svc-header">
-            <div class="svc-num">01</div>
-            <div class="svc-icon"><i class="fas fa-chart-line"></i></div>
-          </div>
-          <h3 class="svc-title">DIGITAL<br>MARKETING</h3>
-          <p class="svc-desc">SEO, content marketing, and growth strategies to increase visibility, traffic, and conversions.</p>
-          <div class="svc-tools">
-            <span>Google Analytics</span>
-            <span>Search Console</span>
-            <span>Google Ads</span>
-            <span>RankMath</span>
-            <span>Canva</span>
-          </div>
-          <div class="svc-corner-deco"></div>
-        </div>
-
-        <div class="svc-card svc-green reveal">
-          <div class="svc-glow"></div>
-          <div class="svc-header">
-            <div class="svc-num">02</div>
-            <div class="svc-icon"><i class="fas fa-code"></i></div>
-          </div>
-          <h3 class="svc-title">WEB<br>DEVELOPMENT</h3>
-          <p class="svc-desc">Responsive, user-friendly websites with WordPress and Wix, with HTML/CSS customization.</p>
-          <div class="svc-tools">
-            <span>WordPress</span>
-            <span>GitHub</span>
-            <span>Wix</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-          <div class="svc-corner-deco"></div>
-        </div>
-
-        <div class="svc-card svc-dim reveal">
-          <div class="svc-glow"></div>
-          <div class="svc-header">
-            <div class="svc-num">03</div>
-            <div class="svc-icon"><i class="fas fa-pen-fancy"></i></div>
-          </div>
-          <h3 class="svc-title">CONTENT<br>CREATION</h3>
-          <p class="svc-desc">Technology, business, and life sciences content powered by cutting-edge AI tools.</p>
-          <div class="svc-tools">
-            <span>ChatGPT</span>
-            <span>Gemini</span>
-            <span>Claude</span>
-            <span>DeepSeek</span>
-            <span>Canva</span>
-          </div>
-          <div class="svc-corner-deco"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ EXPERIENCE ═══ -->
-  <section class="section exp-sec" id="experience">
-    <div class="container">
-      <div class="sec-eyebrow">
-        <span class="mono accent-blue">// 03</span>
-        <span class="eyebrow-line"></span>
-        <span class="mono">EXPERIENCE.log</span>
-      </div>
-      <h2 class="sec-title reveal">PROFESSIONAL<br><em>JOURNEY</em></h2>
-
-      <div class="exp-timeline">
-
-        <div class="exp-item reveal">
-          <div class="exp-connector">
-            <div class="exp-node node-blue"></div>
-            <div class="exp-track"></div>
-          </div>
-          <div class="glass-card exp-card">
-            <div class="exp-top">
+          <aside class="about-card reveal">
+            <div class="acard-head">
+              <span class="avatar" aria-hidden="true">AM</span>
               <div>
-                <h3 class="exp-role">DIGITAL MARKETING EXECUTIVE<br><span class="role-slash">/</span> WEB DEVELOPER</h3>
-                <p class="exp-company"><i class="fas fa-terminal"></i> BTW GROUP</p>
+                <h3>Ajit Mane</h3>
+                <p class="mono">Digital Marketer / Web Dev</p>
               </div>
-              <div class="exp-meta">
-                <span class="exp-date mono">FEB 2024 – PRESENT</span>
-                <span class="exp-badge-live"><span class="live-dot"></span>LIVE</span>
-              </div>
+              <span class="status-tag"><span class="dot"></span>Open to work</span>
             </div>
-            <ul class="exp-list">
-              <li>Managing websites using WordPress and Wix</li>
-              <li>Implementing SEO strategies for improved rankings</li>
-              <li>Running and optimizing marketing campaigns</li>
-              <li>Leveraging analytics tools for data-driven decisions</li>
-              <li>Automating workflows using AI tools</li>
+
+            <ul class="facts">
+              <li>
+                <span class="fact-k mono">EMAIL</span>
+                <a href="mailto:ajitm272@gmail.com">ajitm272@gmail.com</a>
+              </li>
+              <li>
+                <span class="fact-k mono">LOCATION</span>
+                <span>Mumbai, Maharashtra, IN</span>
+              </li>
+              <li>
+                <span class="fact-k mono">TELEGRAM</span>
+                <a href="https://t.me/Mane_Ajit" target="_blank" rel="noopener">@Mane_Ajit</a>
+              </li>
+              <li>
+                <span class="fact-k mono">STATUS</span>
+                <span class="text-green">Available now</span>
+              </li>
             </ul>
-          </div>
+
+            <blockquote class="quote">
+              <p>"Do what you love and you'll never have a problem with Mondays."</p>
+            </blockquote>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVICES ═══════════ -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <p class="eyebrow reveal"><span>02</span> Services</p>
+        <div class="sec-head reveal">
+          <h2 class="section-title">What I can do for you</h2>
+          <p class="sec-head-sub">Three focus areas, one goal — measurable growth for your business.</p>
         </div>
 
-        <div class="exp-item reveal">
-          <div class="exp-connector">
-            <div class="exp-node node-green"></div>
-            <div class="exp-track"></div>
-          </div>
-          <div class="glass-card exp-card">
-            <div class="exp-top">
-              <div>
-                <h3 class="exp-role">OFFICE &amp; ACCOUNTS ASSISTANT</h3>
-                <p class="exp-company"><i class="fas fa-terminal"></i> CA FIRM</p>
-              </div>
-              <div class="exp-meta">
-                <span class="exp-date mono">DEC 2023 – FEB 2024</span>
-              </div>
+        <div class="cards-3">
+          <article class="svc-card reveal">
+            <div class="svc-top">
+              <span class="svc-num mono">/01</span>
+              <span class="svc-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-7"/></svg>
+              </span>
             </div>
-            <ul class="exp-list">
-              <li>Accounting and documentation</li>
-              <li>Office operations support</li>
+            <h3>SEO &amp; Performance Marketing</h3>
+            <p class="svc-desc">Getting found by the right people, at the right moment — and turning that visibility into traffic and conversions.</p>
+            <ul class="svc-points">
+              <li>On-page, technical &amp; local SEO</li>
+              <li>Keyword research &amp; content mapping</li>
+              <li>Google Ads campaigns &amp; optimization</li>
+              <li>GA4 + Search Console reporting</li>
             </ul>
-          </div>
-        </div>
-
-        <div class="exp-item reveal">
-          <div class="exp-connector">
-            <div class="exp-node node-blue"></div>
-          </div>
-          <div class="glass-card exp-card">
-            <div class="exp-top">
-              <div>
-                <h3 class="exp-role">E-COMMERCE &amp; SEO EXECUTIVE</h3>
-                <p class="exp-company"><i class="fas fa-terminal"></i> ECOM RETAILS INDIA PVT. LTD.</p>
-              </div>
+            <div class="svc-tools">
+              <span>GA4</span><span>Search Console</span><span>Google Ads</span><span>SEMrush</span><span>Ubersuggest</span><span>RankMath</span>
             </div>
-            <ul class="exp-list">
-              <li>Product listings and SEO optimization</li>
-              <li>Website updates and promotional campaigns</li>
+          </article>
+
+          <article class="svc-card reveal">
+            <div class="svc-top">
+              <span class="svc-num mono">/02</span>
+              <span class="svc-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg>
+              </span>
+            </div>
+            <h3>Web Development &amp; CMS</h3>
+            <p class="svc-desc">Fast, responsive, conversion-ready websites — built on platforms your team can actually manage.</p>
+            <ul class="svc-points">
+              <li>WordPress &amp; Wix builds and revamps</li>
+              <li>HTML/CSS customization</li>
+              <li>Speed &amp; mobile-first optimization</li>
+              <li>Analytics &amp; tracking setup</li>
             </ul>
-          </div>
+            <div class="svc-tools">
+              <span>WordPress</span><span>Wix</span><span>HTML</span><span>CSS</span><span>GitHub</span>
+            </div>
+          </article>
+
+          <article class="svc-card reveal">
+            <div class="svc-top">
+              <span class="svc-num mono">/03</span>
+              <span class="svc-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+              </span>
+            </div>
+            <h3>Content &amp; AI-Powered Workflows</h3>
+            <p class="svc-desc">Consistent, on-brand content — produced with AI-assisted systems that scale without losing quality.</p>
+            <ul class="svc-points">
+              <li>Blog &amp; content strategy</li>
+              <li>AI-assisted writing pipelines</li>
+              <li>Content calendars &amp; publishing ops</li>
+              <li>Canva graphics &amp; social assets</li>
+            </ul>
+            <div class="svc-tools">
+              <span>ChatGPT</span><span>Gemini</span><span>Claude</span><span>DeepSeek</span><span>Canva</span><span>Leonardo AI</span>
+            </div>
+          </article>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ EDUCATION ═══ -->
-  <section class="section edu-sec" id="education">
-    <div class="container">
-      <div class="sec-eyebrow">
-        <span class="mono accent-green">// 04</span>
-        <span class="eyebrow-line"></span>
-        <span class="mono">EDUCATION.db</span>
-      </div>
-      <h2 class="sec-title reveal">ACADEMIC<br><em>BACKGROUND</em></h2>
-
-      <div class="edu-grid">
-        <div class="glass-card edu-card reveal">
-          <div class="edu-ico ico-blue"><i class="fas fa-university"></i></div>
-          <div class="edu-body">
-            <span class="edu-tag">PURSUING</span>
-            <h3>MBA (FINANCE)</h3>
-            <p>D.Y. Patil University</p>
-          </div>
-          <div class="edu-level-bar" style="--pct:60%"></div>
-        </div>
-        <div class="glass-card edu-card reveal">
-          <div class="edu-ico ico-green"><i class="fas fa-graduation-cap"></i></div>
-          <div class="edu-body">
-            <h3>BACHELOR OF COMMERCE</h3>
-            <p>Mumbai University</p>
-          </div>
-          <div class="edu-level-bar" style="--pct:100%"></div>
-        </div>
-        <div class="glass-card edu-card reveal">
-          <div class="edu-ico ico-blue"><i class="fas fa-school"></i></div>
-          <div class="edu-body">
-            <h3>12TH — COMMERCE</h3>
-            <p>R. M. Bhatt College</p>
-          </div>
-          <div class="edu-level-bar" style="--pct:100%"></div>
-        </div>
-        <div class="glass-card edu-card reveal">
-          <div class="edu-ico ico-green"><i class="fas fa-book-open"></i></div>
-          <div class="edu-body">
-            <h3>10TH — SSC</h3>
-            <p>Loknete Babasaheb Chorekar Vidyalaya</p>
-          </div>
-          <div class="edu-level-bar" style="--pct:100%"></div>
+        <div class="cta-strip reveal">
+          <p>Not sure which one you need? <strong>Let's figure it out together.</strong></p>
+          <a href="#contact" class="btn btn-primary">Start a conversation</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ TOOLS ═══ -->
-  <section class="section tools-sec" id="tools">
-    <div class="container">
-      <div class="sec-eyebrow">
-        <span class="mono accent-blue">// 05</span>
-        <span class="eyebrow-line"></span>
-        <span class="mono">TOOLS.config</span>
+    <!-- ═══════════ PROCESS ═══════════ -->
+    <section class="section" id="process">
+      <div class="container">
+        <p class="eyebrow reveal"><span>03</span> Process</p>
+        <h2 class="section-title reveal">How I work</h2>
+
+        <ol class="process-list">
+          <li class="process-item reveal">
+            <span class="p-num mono">01</span>
+            <h3>Discover</h3>
+            <p>Audit your current presence, understand goals, research keywords and competitors.</p>
+          </li>
+          <li class="process-item reveal">
+            <span class="p-num mono">02</span>
+            <h3>Build</h3>
+            <p>Ship the website, content, or campaign — with clean tracking from day one.</p>
+          </li>
+          <li class="process-item reveal">
+            <span class="p-num mono">03</span>
+            <h3>Optimize</h3>
+            <p>Improve on-page, technical and ad performance based on real data, not guesses.</p>
+          </li>
+          <li class="process-item reveal">
+            <span class="p-num mono">04</span>
+            <h3>Report &amp; iterate</h3>
+            <p>Clear monthly reports in plain language — what moved, why, and what's next.</p>
+          </li>
+        </ol>
       </div>
-      <h2 class="sec-title reveal">MY <em>TOOLKIT</em></h2>
-    </div>
+    </section>
 
-    <div class="marquee-outer reveal">
-      <div class="mq-row mq-fwd">
-        <div class="mq-track">
-          <span class="tchip"><i class="fab fa-wordpress"></i> WordPress</span>
-          <span class="tchip"><i class="fas fa-globe"></i> Wix</span>
-          <span class="tchip"><i class="fab fa-html5"></i> HTML</span>
-          <span class="tchip"><i class="fab fa-css3-alt"></i> CSS</span>
-          <span class="tchip"><i class="fas fa-chart-bar"></i> Google Analytics</span>
-          <span class="tchip"><i class="fas fa-search"></i> Search Console</span>
-          <span class="tchip"><i class="fas fa-ad"></i> Google Ads</span>
-          <span class="tchip"><i class="fas fa-chart-pie"></i> SEMrush</span>
-          <span class="tchip"><i class="fas fa-bullseye"></i> Ubersuggest</span>
-          <span class="tchip"><i class="fab fa-wordpress"></i> WordPress</span>
-          <span class="tchip"><i class="fas fa-globe"></i> Wix</span>
-          <span class="tchip"><i class="fab fa-html5"></i> HTML</span>
-          <span class="tchip"><i class="fab fa-css3-alt"></i> CSS</span>
-          <span class="tchip"><i class="fas fa-chart-bar"></i> Google Analytics</span>
-          <span class="tchip"><i class="fas fa-search"></i> Search Console</span>
-          <span class="tchip"><i class="fas fa-ad"></i> Google Ads</span>
-          <span class="tchip"><i class="fas fa-chart-pie"></i> SEMrush</span>
-          <span class="tchip"><i class="fas fa-bullseye"></i> Ubersuggest</span>
+    <!-- ═══════════ SELECTED WORK ═══════════ -->
+    <section class="section section-alt" id="work">
+      <div class="container">
+        <p class="eyebrow reveal"><span>04</span> Selected work</p>
+        <div class="sec-head reveal">
+          <h2 class="section-title">What I've built &amp; managed</h2>
+          <p class="sec-head-sub">Real websites, real businesses, real results. Details and metrics available on request.</p>
+        </div>
+
+        <!-- Primary: live websites -->
+        <div class="work-grid">
+          <article class="work-card work-card-hero reveal">
+            <div class="work-tags"><span>Web Dev</span><span>SEO</span><span>AI Integration</span></div>
+            <h3>BTW Corporate Visa</h3>
+            <p>Enterprise-grade corporate visa management portal — featuring Visa Desk, Visa Implant and Process Outsourcing services. Built the digital platform supporting 4.2L+ visas processed and 7,200+ corporate clients across India.</p>
+            <div class="work-metrics">
+              <span><strong>7,200+</strong> corporate clients</span>
+              <span><strong>4.2L+</strong> visas processed</span>
+              <span><strong>15+</strong> years of expertise</span>
+            </div>
+            <div class="work-links">
+              <a href="https://corporate.btwvisas.com/" target="_blank" rel="noopener" class="work-link">Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              <a href="https://www.linkedin.com/company/btw-visa-services/" target="_blank" rel="noopener" class="work-link-icon" aria-label="BTW Visa Services LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://www.reddit.com/user/Global-Adventures/" target="_blank" rel="noopener" class="work-link-icon" aria-label="Global-Adventures Reddit">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12s12-5.37 12-12C24 5.37 18.63 0 12 0zm5.52 13.68c.05.32.08.64.08.97 0 3.19-3.67 5.78-8.2 5.78-4.52 0-8.2-2.59-8.2-5.78 0-.33.03-.65.08-.97a1.7 1.7 0 0 1-.69-1.38c0-.94.76-1.7 1.7-1.7.46 0 .87.18 1.17.48a9.84 9.84 0 0 1 4.84-1.57l.94-4.4a.37.37 0 0 1 .44-.27l3.12.66a1.2 1.2 0 1 1 .04.41l-2.96-.63-.82 3.9c1.84.18 3.52.8 4.84 1.57.3-.3.71-.48 1.17-.48.94 0 1.7.76 1.7 1.7 0 .56-.26 1.06-.69 1.38zM8.5 13a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6zm7 0a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6zm-3.5 4.36c-2.08 0-3.76-1.1-3.76-2.46h.68c0 .83 1.43 1.5 3.08 1.5s3.08-.67 3.08-1.5h.68c0 1.36-1.68 2.46-3.76 2.46z"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="work-card work-card-hero reveal">
+            <div class="work-tags"><span>Web Dev</span><span>Content</span><span>SEO</span></div>
+            <h3>MY Visa Assistance</h3>
+            <p>Comprehensive visa information portal covering 34+ countries with detailed guides, requirements, processing timelines, and embassy directories. Built a content-driven platform that processes 2,500+ visa inquiries.</p>
+            <div class="work-metrics">
+              <span><strong>34+</strong> countries covered</span>
+              <span><strong>2,500+</strong> inquiries processed</span>
+              <span><strong>98%</strong> satisfaction rate</span>
+            </div>
+            <a href="https://myvisaassistance.com/" target="_blank" rel="noopener" class="work-link">Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="work-card work-card-hero reveal">
+            <div class="work-tags"><span>Web Dev</span><span>Insurance</span><span>Lead Gen</span></div>
+            <h3>BTW IMF — Insurance &amp; Wealth</h3>
+            <p>IRDAI-licensed insurance marketing firm platform — 27 insurance products compared across 15+ insurers. Built the digital presence for health, life, motor, travel and investment services serving 10,000+ families.</p>
+            <div class="work-metrics">
+              <span><strong>10,000+</strong> families served</span>
+              <span><strong>27</strong> insurance products</span>
+              <span><strong>15+</strong> insurers compared</span>
+            </div>
+            <a href="https://btwimf.com/" target="_blank" rel="noopener" class="work-link">Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="work-card work-card-hero reveal">
+            <div class="work-tags"><span>E-Commerce</span><span>Web Dev</span><span>Logistics</span></div>
+            <h3>AKFishers — Fresh Seafood Delivery</h3>
+            <p>Fresh fish and seafood e-commerce platform serving 60+ areas across Mumbai — daily Sassoon Dock sourcing, hygienic cleaning, vacuum-sealed packaging, and temperature-controlled doorstep delivery.</p>
+            <div class="work-metrics">
+              <span><strong>60+</strong> Mumbai delivery areas</span>
+              <span><strong>&lt;24h</strong> boat to doorstep</span>
+              <span><strong>Daily</strong> fresh catch</span>
+            </div>
+            <a href="https://akfishers.com/" target="_blank" rel="noopener" class="work-link">Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </article>
+        </div>
+
+        <!-- Secondary: content & portfolio -->
+        <div class="work-secondary">
+          <article class="work-card work-card-sm reveal">
+            <div class="work-tags"><span>Content</span><span>AI Workflows</span><span>Planning</span></div>
+            <h3>Blog &amp; content pipeline — 20+ topics</h3>
+            <p>Content calendars and blog drafts for BTW Group — including a Tokyo Gift Show 2026 feature, Doctor-on-Call service explainer, and city expansion announcements — all produced with AI-assisted writing workflows.</p>
+            <a href="#blog" class="work-link">See planned topics <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="work-card work-card-sm reveal">
+            <div class="work-tags"><span>HTML/CSS/JS</span><span>Design</span><span>Performance</span></div>
+            <h3>This portfolio — audited &amp; rebuilt</h3>
+            <p>Full audit of the previous site (SEO, a11y, performance, conversion), followed by this clean rebuild: semantic HTML, self-contained assets, working contact flow, and proper social sharing.</p>
+            <a href="#top" class="work-link">You're looking at it <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </article>
         </div>
       </div>
-      <div class="mq-row mq-rev">
-        <div class="mq-track">
-          <span class="tchip tchip-g"><i class="fas fa-star"></i> RankMath</span>
-          <span class="tchip tchip-g"><i class="fas fa-palette"></i> Canva</span>
-          <span class="tchip tchip-g"><i class="fas fa-robot"></i> ChatGPT</span>
-          <span class="tchip tchip-g"><i class="fas fa-gem"></i> Gemini</span>
-          <span class="tchip tchip-g"><i class="fas fa-brain"></i> Claude</span>
-          <span class="tchip tchip-g"><i class="fas fa-microchip"></i> DeepSeek</span>
-          <span class="tchip tchip-g"><i class="fas fa-bolt"></i> Grok</span>
-          <span class="tchip tchip-g"><i class="fas fa-question-circle"></i> Perplexity</span>
-          <span class="tchip tchip-g"><i class="fas fa-image"></i> Leonardo AI</span>
-          <span class="tchip tchip-g"><i class="fas fa-star"></i> RankMath</span>
-          <span class="tchip tchip-g"><i class="fas fa-palette"></i> Canva</span>
-          <span class="tchip tchip-g"><i class="fas fa-robot"></i> ChatGPT</span>
-          <span class="tchip tchip-g"><i class="fas fa-gem"></i> Gemini</span>
-          <span class="tchip tchip-g"><i class="fas fa-brain"></i> Claude</span>
-          <span class="tchip tchip-g"><i class="fas fa-microchip"></i> DeepSeek</span>
-          <span class="tchip tchip-g"><i class="fas fa-bolt"></i> Grok</span>
-          <span class="tchip tchip-g"><i class="fas fa-question-circle"></i> Perplexity</span>
-          <span class="tchip tchip-g"><i class="fas fa-image"></i> Leonardo AI</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ CONTACT ═══ -->
-  <section class="section contact-sec" id="contact">
-    <div class="container">
-      <div class="sec-eyebrow">
-        <span class="mono accent-green">// 06</span>
-        <span class="eyebrow-line"></span>
-        <span class="mono">CONTACT.init()</span>
-      </div>
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="eyebrow reveal"><span>05</span> Experience</p>
+        <h2 class="section-title reveal">Where I've been</h2>
 
-      <div class="contact-layout">
-        <div class="contact-left reveal">
-          <h2 class="sec-title">LET'S<br><em>WORK</em><br>TOGETHER</h2>
-          <p class="contact-sub">Have a project in mind? Let's build something electric.</p>
-
-          <div class="contact-items">
-            <a href="mailto:ajitm272@gmail.com" class="c-item">
-              <div class="c-ico ico-blue"><i class="fas fa-envelope"></i></div>
-              <div class="c-info">
-                <div class="c-label mono">EMAIL</div>
-                <div class="c-val">ajitm272@gmail.com</div>
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"><span class="tl-dot dot-live"></span></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3>Digital Marketing Executive / Web Developer</h3>
+                <span class="tl-date mono">FEB 2024 — PRESENT</span>
               </div>
-              <i class="fas fa-arrow-right c-arr"></i>
-            </a>
-            <a href="https://t.me/Mane_Ajit" target="_blank" rel="noopener" class="c-item">
-              <div class="c-ico ico-green"><i class="fab fa-telegram"></i></div>
-              <div class="c-info">
-                <div class="c-label mono">TELEGRAM</div>
-                <div class="c-val">@Mane_Ajit</div>
+              <p class="tl-org">BTW Group</p>
+              <ul>
+                <li>Built &amp; managed corporate.btwvisas.com — enterprise visa portal with AI assistant, 7,200+ clients</li>
+                <li>Built myvisaassistance.com — visa info portal covering 34+ countries, 2,500+ inquiries</li>
+                <li>Built btwimf.com — insurance &amp; wealth platform, 27 products across 15+ insurers</li>
+                <li>Implemented SEO strategies, GA4 analytics &amp; content pipelines across all properties</li>
+                <li>Automated workflows using AI tools (ChatGPT, Claude, Gemini)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"><span class="tl-dot"></span></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3>Office &amp; Accounts Assistant</h3>
+                <span class="tl-date mono">DEC 2023 — FEB 2024</span>
               </div>
-              <i class="fas fa-arrow-right c-arr"></i>
-            </a>
-            <div class="c-item">
-              <div class="c-ico ico-blue"><i class="fas fa-map-marker-alt"></i></div>
-              <div class="c-info">
-                <div class="c-label mono">LOCATION</div>
-                <div class="c-val">Mumbai, India</div>
+              <p class="tl-org">CA Firm</p>
+              <ul>
+                <li>Accounting and documentation</li>
+                <li>Office operations support</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"><span class="tl-dot"></span></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3>E-commerce &amp; SEO Executive</h3>
+                <span class="tl-date mono">EARLIER</span>
+              </div>
+              <p class="tl-org">Ecom Retails India Pvt. Ltd.</p>
+              <ul>
+                <li>Product listings and SEO optimization</li>
+                <li>Website updates and promotional campaigns</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="edu-strip reveal" aria-label="Education">
+          <div class="edu-item"><strong>MBA (Finance)</strong><span>D.Y. Patil University · pursuing</span></div>
+          <div class="edu-item"><strong>B.Com</strong><span>Mumbai University</span></div>
+          <div class="edu-item"><strong>HSC — Commerce</strong><span>R. M. Bhatt College</span></div>
+          <div class="edu-item"><strong>SSC</strong><span>Loknete Babasaheb Chorekar Vidyalaya</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TOOLS MARQUEE ═══════════ -->
+    <section class="toolbelt" aria-label="My toolkit">
+      <p class="mono toolbelt-label reveal">My toolkit — analytics · SEO · build · AI</p>
+      <div class="marquee reveal" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Google Analytics</span><span>Search Console</span><span>Google Ads</span><span>SEMrush</span><span>Ubersuggest</span><span>RankMath</span><span>WordPress</span><span>Wix</span><span>HTML</span><span>CSS</span><span>GitHub</span><span>Canva</span><span>ChatGPT</span><span>Gemini</span><span>Claude</span><span>DeepSeek</span><span>Grok</span><span>Perplexity</span><span>Leonardo AI</span><span>Google Analytics</span><span>Search Console</span><span>Google Ads</span><span>SEMrush</span><span>Ubersuggest</span><span>RankMath</span><span>WordPress</span><span>Wix</span><span>HTML</span><span>CSS</span><span>GitHub</span><span>Canva</span><span>ChatGPT</span><span>Gemini</span><span>Claude</span><span>DeepSeek</span><span>Grok</span><span>Perplexity</span><span>Leonardo AI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ BLOG ═══════════ -->
+    <section class="section" id="blog">
+      <div class="container">
+        <p class="eyebrow reveal"><span>06</span> Blog</p>
+        <div class="sec-head reveal">
+          <h2 class="section-title">Fresh from the content lab</h2>
+          <p class="sec-head-sub">The blog is launching soon — here's a taste of what's being written.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="blog-card reveal">
+            <span class="blog-tag mono">MARKET / EVENT</span>
+            <h3>Tokyo Gift Show 2026 — what Indian exhibitors should prepare</h3>
+            <p>Pre-event guide covering booth strategy, buyer expectations and follow-up playbooks.</p>
+          </article>
+          <article class="blog-card reveal">
+            <span class="blog-tag mono">SERVICE</span>
+            <h3>Doctor-on-Call services — how healthcare is going home</h3>
+            <p>Explainer on the on-demand healthcare model and why local SEO wins for providers.</p>
+          </article>
+          <article class="blog-card reveal">
+            <span class="blog-tag mono">GROWTH</span>
+            <h3>BTW Group expands — what Andheri &amp; Navi Mumbai presence means</h3>
+            <p>City-level expansion story and the marketing playbook behind multi-location growth.</p>
+          </article>
+        </div>
+
+        <div class="blog-more reveal">
+          <a href="/blog/" class="btn btn-ghost">Visit the blog <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="section section-dark" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="eyebrow eyebrow-light"><span>07</span> Contact</p>
+            <h2 class="section-title section-title-light">Let's build something worth clicking.</h2>
+            <p class="contact-sub">
+              Have a project, a website that needs fixing, or a growth problem?
+              Send a message — I reply fast, usually within a day.
+            </p>
+
+            <div class="contact-channels">
+              <a href="mailto:ajitm272@gmail.com" class="channel">
+                <span class="channel-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m2 7 10 6L22 7"/></svg>
+                </span>
+                <span><strong>Email</strong><span class="mono">ajitm272@gmail.com</span></span>
+                <svg class="channel-arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+              <a href="https://t.me/Mane_Ajit" target="_blank" rel="noopener" class="channel">
+                <span class="channel-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M21.9 4.6 18.9 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.25.25-.45.45-.9.45l.3-4.6L18.2 6.6c.4-.3-.1-.5-.6-.2L6.8 13 2.3 11.5c-1-.3-1-1 .2-1.4l18-6.9c.8-.3 1.6.2 1.4 1.4z"/></svg>
+                </span>
+                <span><strong>Telegram</strong><span class="mono">@Mane_Ajit</span></span>
+                <svg class="channel-arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/mane-ajit/" target="_blank" rel="noopener" class="channel">
+                <span class="channel-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                </span>
+                <span><strong>LinkedIn</strong><span class="mono">in/mane-ajit</span></span>
+                <svg class="channel-arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+              <div class="channel">
+                <span class="channel-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </span>
+                <span><strong>Based in</strong><span class="mono">Mumbai, Maharashtra</span></span>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="contact-right reveal">
-          <div class="glass-card form-glass">
-            <form id="contactForm" novalidate>
-              <div class="fg-row">
-                <div class="fg">
-                  <label class="mono">NAME_</label>
-                  <input type="text" id="cname" name="name" placeholder="Your name" required/>
+          <div class="contact-form-wrap reveal">
+            <form class="form-card" id="contactForm" novalidate>
+              <h3>Send a message</h3>
+              <div class="form-row">
+                <div class="field">
+                  <label for="cname" class="mono">NAME</label>
+                  <input type="text" id="cname" name="name" placeholder="Your name" autocomplete="name" required/>
+                  <span class="field-err" id="err-cname" aria-live="polite"></span>
                 </div>
-                <div class="fg">
-                  <label class="mono">EMAIL_</label>
-                  <input type="email" id="cemail" name="email" placeholder="your@email.com" required/>
+                <div class="field">
+                  <label for="cemail" class="mono">EMAIL</label>
+                  <input type="email" id="cemail" name="email" placeholder="you@company.com" autocomplete="email" required/>
+                  <span class="field-err" id="err-cemail" aria-live="polite"></span>
                 </div>
               </div>
-              <div class="fg">
-                <label class="mono">SUBJECT_</label>
-                <input type="text" id="csubject" name="subject" placeholder="Project inquiry"/>
+              <div class="field">
+                <label for="csubject" class="mono">SUBJECT</label>
+                <input type="text" id="csubject" name="subject" placeholder="Project inquiry, collaboration…"/>
               </div>
-              <div class="fg">
-                <label class="mono">MESSAGE_</label>
-                <textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <div class="field">
+                <label for="cmessage" class="mono">MESSAGE</label>
+                <textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+                <span class="field-err" id="err-cmessage" aria-live="polite"></span>
               </div>
-              <button type="submit" class="form-submit">
-                <span class="submit-bg"></span>
-                <span>TRANSMIT MESSAGE <i class="fas fa-paper-plane"></i></span>
+
+              <button type="submit" class="btn btn-primary btn-block" id="formBtn">
+                <span class="btn-label">Send message</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
               </button>
-              <div class="form-ok" id="formSuccess">
-                <i class="fas fa-check-circle"></i> <span class="mono">TRANSMISSION SUCCESSFUL. WILL RESPOND SOON.</span>
-              </div>
+
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ═══ FOOTER ═══ -->
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-row">
-        <div class="footer-brand mono">
-          <span class="accent-blue">&lt;</span>AM<span class="accent-blue">/&gt;</span>
-          <span class="footer-name">AJIT MANE</span>
-        </div>
-        <p class="footer-copy mono">© 2024 AJIT MANE IN MUMBAI MAHARASHTRA</p>
-        <a href="#home" class="top-btn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <div class="container footer-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark" aria-hidden="true">&lt;AM/&gt;</span>
+        <span class="logo-text">Ajit Mane</span>
+      </a>
+      <p class="mono">© <span id="year">2026</span> Ajit Mane · Mumbai, Maharashtra</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/mane-ajit/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://t.me/Mane_Ajit" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg viewBox="0 0 24 24"><path d="M21.9 4.6 18.9 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.25.25-.45.45-.9.45l.3-4.6L18.2 6.6c.4-.3-.1-.5-.6-.2L6.8 13 2.3 11.5c-1-.3-1-1 .2-1.4l18-6.9c.8-.3 1.6.2 1.4 1.4z"/></svg>
+        </a>
+        <a href="mailto:ajitm272@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m2 7 10 6L22 7"/></svg>
+        </a>
+        <a href="#top" aria-label="Back to top">
+          <svg viewBox="0 0 24 24"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
+        </a>
       </div>
     </div>
   </footer>
