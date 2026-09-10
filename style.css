@@ -514,6 +514,8 @@ a.channel:hover { border-color:rgba(165,180,252,.55); background:rgba(255,255,25
 .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; padding-block:26px; }
 .footer .logo-text { color:#fff; }
 .footer p { font-size:.78rem; letter-spacing:.04em; }
+.footer-link { font-size:.82rem; font-weight:600; color:rgba(255,255,255,.75); transition:var(--tr); }
+.footer-link:hover { color:#a5b4fc; }
 .socials { display:flex; gap:10px; }
 .socials a {
   width:38px; height:38px; border-radius:10px;
